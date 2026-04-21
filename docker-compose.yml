@@ -1,0 +1,63 @@
+services:
+
+  # ── Backend: FastAPI ──────────────────────────────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: gym_backend
+    restart: unless-stopped
+    environment:
+      - APP_NAME=GymSystem Pro
+      - DEBUG=False
+      - DATABASE_URL=sqlite:////app/data/gimnasio.db
+      - SECRET_KEY=${SECRET_KEY:-cambia-esta-clave-segura-en-produccion-xyz789}
+      - UPLOAD_DIR=/app/uploads
+      - FACES_DIR=/app/uploads/faces
+      - HIKVISION_TIMEOUT=10
+    volumes:
+      - gym_db:/app/data          # Base de datos SQLite persistente
+      - gym_uploads:/app/uploads  # Fotos de miembros persistentes
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 20s
+    networks:
+      - gym_network
+    # NO exponer el backend directamente — acceder via frontend/Nginx
+
+  # ── Frontend: React + Nginx (reverse proxy) ──────────────────────────────
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: gym_frontend
+    restart: unless-stopped
+    ports:
+      - "${FRONTEND_PORT:-3000}:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks:
+      - gym_network
+    labels:
+      # Etiquetas para Coolify / Traefik (SSL automático)
+      - "traefik.enable=true"
+      - "traefik.http.routers.gym.rule=Host(`${DOMAIN:-gym.localhost}`)"
+      - "traefik.http.routers.gym.entrypoints=websecure"
+      - "traefik.http.routers.gym.tls=true"
+      - "traefik.http.routers.gym.tls.certresolver=letsencrypt"
+      - "traefik.http.services.gym.loadbalancer.server.port=80"
+
+volumes:
+  gym_db:
+    name: gym_db_data
+  gym_uploads:
+    name: gym_uploads_data
+
+networks:
+  gym_network:
+    name: gym_network
+    driver: bridge

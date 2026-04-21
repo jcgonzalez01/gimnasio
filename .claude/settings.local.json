@@ -1,0 +1,32 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where python *)",
+      "Bash(where python3 *)",
+      "Bash(where py *)",
+      "Bash(py --version)",
+      "Read(//c/Users/jcgon/AppData/Local/Programs/**)",
+      "Bash(where npm *)",
+      "Bash(npm --version)",
+      "PowerShell(Get-Command python -ErrorAction SilentlyContinue)",
+      "PowerShell(Get-Command uvicorn -ErrorAction SilentlyContinue)",
+      "PowerShell(python --version 2>&1)",
+      "mcp__Claude_Preview__preview_start",
+      "WebSearch",
+      "WebFetch(domain:www.scribd.com)",
+      "WebFetch(domain:ipcamtalk.com)",
+      "WebFetch(domain:tpp.hikvision.com)",
+      "WebFetch(domain:enpinfo.hikvision.com)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:assets.hikvision.com)",
+      "mcp__Claude_in_Chrome__browser_batch",
+      "WebFetch(domain:www.youtube.com)",
+      "WebFetch(domain:www.postman.com)",
+      "WebFetch(domain:dev.to)",
+      "WebFetch(domain:www.hikvisioneurope.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(python -c \"from app.services.hikvision import HikvisionISAPI; print\\('OK'\\)\")",
+      "Bash(python3 -c \"from app.services.hikvision import HikvisionISAPI; print\\('OK'\\)\")"
+    ]
+  }
+}

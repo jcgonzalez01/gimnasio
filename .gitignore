@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+*.db
+*.db-shm
+*.db-wal
+.python
+
+# Node
+node_modules/
+dist/
+.vite/
+
+# Entornos
+.env
+!.env.production
+*.env.local
+
+# Uploads (no versionar fotos)
+backend/uploads/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

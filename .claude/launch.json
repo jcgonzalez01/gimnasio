@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Frontend (Vite + React)",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "frontend", "run", "dev"],
+      "port": 5173
+    },
+    {
+      "name": "Backend (FastAPI + Uvicorn)",
+      "runtimeExecutable": "powershell",
+      "runtimeArgs": ["-ExecutionPolicy", "Bypass", "-File", "run-backend-dev.ps1"],
+      "port": 8000
+    }
+  ]
+}
