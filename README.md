@@ -61,9 +61,26 @@ El proyecto incluye un script de inicio rápido para Windows:
 ```
 
 Este script iniciará:
-1.  **Backend** en `http://localhost:8000`
+1.  **Backend** en `http://localhost:8001` (Puerto 8001 para evitar conflictos con servicios del sistema).
 2.  **Frontend** en `http://localhost:5173`
 3.  **Monitor de Eventos** para dispositivos Hikvision.
+
+## 🚀 Novedades de esta Versión (v1.2)
+
+### ⚙️ Infraestructura y Red
+-   **Migración de Puerto**: El backend ahora corre por defecto en el puerto **8001** para eliminar interferencias con procesos antiguos y asegurar una conexión limpia.
+-   **Seguridad de Red**: Configuración del servidor para escuchar en todas las interfaces (`0.0.0.0`), permitiendo la comunicación directa con hardware Hikvision en la red local.
+
+### 📸 Estabilización Hikvision
+-   **Modo Push Activo**: Configuración automática del terminal para enviar eventos al servidor al instante, sin esperas.
+-   **Sincronización Horaria**: Herramientas para igualar la fecha, hora y zona horaria entre el PC y el hardware.
+-   **Monitor Robusto**: Nuevo motor de monitoreo basado en números de secuencia (Serial Number) que ignora desajustes de reloj.
+
+### 📊 Mejoras en Dashboard y Reportes
+-   **Regla de las 4 Horas**: El contador de "Entradas Hoy" ahora es más real; múltiples entradas de un mismo socio en un lapso menor a 4 horas cuentan como una sola visita.
+-   **Contador de Aperturas Manuales**: Nueva métrica para auditar cuántas veces se abrió la puerta desde el software.
+-   **Dashboard Limpio**: La sección de "Recién Llegados" ahora muestra una sola foto por ID, priorizando el ingreso más reciente.
+-   **Formato 24H**: Unificación de toda la interfaz al formato de hora de 24 horas.
 
 ## 📸 Control de Acceso (Hikvision)
 

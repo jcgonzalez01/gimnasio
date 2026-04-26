@@ -1,3 +1,26 @@
+# Historial de Cambios
+
+## [1.2.0] — 2026-04-26
+
+### 🚀 Estabilización y Red
+- **Migración a Puerto 8001**: Cambio de puerto default del backend de 8000 a 8001 para evitar conflictos de ruteo y procesos huérfanos.
+- **Escucha Global (0.0.0.0)**: Backend ahora acepta conexiones de cualquier IP en la red, facilitando la integración con hardware externo.
+- **Corrección de Ruteo**: Reordenamiento de rutas FastAPI para solucionar error 404 en la eliminación de membresías.
+
+### 📸 Integración Hikvision
+- **Modo Push**: Implementación de sincronización automática desde el terminal al servidor vía HTTP Hosts.
+- **Seguimiento por Serial**: Nuevo algoritmo de monitoreo que usa el número de secuencia del dispositivo en lugar de la hora, eliminando errores por desincronización de relojes.
+- **Sincronización Total**: Herramientas de ajuste de Zona Horaria y Hora Local para terminales ISAPI.
+- **Corrección de Borrado**: Se corrigió el comando ISAPI para la eliminación física de usuarios del hardware.
+
+### 📊 Dashboard y Experiencia de Usuario
+- **Regla de 4 Horas**: Filtrado inteligente de asistencia diaria; solo cuenta una entrada por miembro cada 4 horas.
+- **Auditoría de Aperturas**: Nuevo contador en el Dashboard para aperturas manuales remotas.
+- **Unificación 24H**: Todo el sistema ahora muestra el tiempo en formato de 24 horas.
+- **Dashboard Sin Duplicados**: Sección de "Recién Llegados" filtrada por ID de miembro.
+
+---
+
 # Cambios v1.1 — Hardening + features de producción
 
 Implementación completa del listado P0/P1/P2 (excepto captura de foto por webcam).
