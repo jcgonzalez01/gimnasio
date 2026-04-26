@@ -8,6 +8,10 @@ start "Backend - GymSystem" cmd /k "cd /d "%~dp0backend" && (if not exist venv p
 
 timeout /t 4 /nobreak >nul
 
+start "Monitor Hikvision - GymSystem" cmd /k "cd /d "%~dp0" && title Monitor de Eventos && (if exist backend\venv call backend\venv\Scripts\activate) && python monitor_events.py"
+
+timeout /t 2 /nobreak >nul
+
 start "Frontend - GymSystem" cmd /k "cd /d "%~dp0frontend" && (if not exist node_modules npm install) && npm run dev"
 
 timeout /t 5 /nobreak >nul
@@ -20,5 +24,6 @@ echo Sistema iniciado!
 echo Backend:  http://localhost:8000
 echo Frontend: http://localhost:5173
 echo API Docs: http://localhost:8000/api/docs
+echo Monitor Hikvision: Corriendo en otra ventana
 echo.
 pause

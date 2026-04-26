@@ -14,6 +14,7 @@ from ..schemas.access import (
     AccessLogCreate, AccessLogOut, AccessEventWS
 )
 from ..services.hikvision import HikvisionISAPI, image_file_to_base64
+from ..services.hikvision.parser import parse_event_payload
 from ..services.websocket_manager import ws_manager
 
 router = APIRouter(prefix="/access", tags=["Control de Acceso"])
@@ -84,6 +85,7 @@ def open_door(device_id: int, door_no: int = 1, db: Session = Depends(get_db)):
         raise HTTPException(status_code=404, detail="Dispositivo no encontrado")
     hik = HikvisionISAPI(d.ip_address, d.port, d.username, d.password)
     result = hik.open_door(door_no=door_no)
+    print(f"DEBUG: open_door result type: {type(result)}, value: {result}")
     return result
 
 
@@ -864,6 +866,55 @@ async def unenroll_face(member_id: int, db: Session = Depends(get_db)):
 
 # ── Logs de acceso ────────────────────────────────────────────────────────────
 
+@router.get("/recent-faces")
+def get_recent_faces(db: Session = Depends(get_db)):
+    """Obtiene el PRIMER acceso exitoso del día de cada miembro, si ocurrió en la última hora."""
+    now = datetime.utcnow()
+    one_hour_ago = now - timedelta(hours=1)
+    today_start = now.replace(hour=0, minute=0, second=0, microsecond=0)
+    
+    # 1. Obtener todos los IDs de miembros que entraron en la última hora
+    recent_logs = (
+        db.query(AccessLog.member_id)
+        .filter(AccessLog.timestamp >= one_hour_ago)
+        .filter(AccessLog.result == "granted")
+        .filter(AccessLog.member_id.isnot(None))
+        .distinct()
+        .all()
+    )
+    member_ids = [r[0] for r in recent_logs]
+    
+    recent = []
+    for m_id in member_ids:
+        # 2. Para cada uno de esos miembros, buscar su PRIMER acceso de TODO el día de hoy
+        first_log_today = (
+            db.query(AccessLog)
+            .filter(AccessLog.member_id == m_id)
+            .filter(AccessLog.timestamp >= today_start)
+            .filter(AccessLog.result == "granted")
+            .order_by(AccessLog.timestamp.asc())
+            .first()
+        )
+        
+        # 3. Solo lo incluimos si ese primer acceso ocurrió hace menos de una hora
+        if first_log_today and first_log_today.timestamp >= one_hour_ago:
+            member = db.query(Member).filter(Member.id == m_id).first()
+            if member:
+                recent.append({
+                    "id": first_log_today.id,
+                    "member_id": member.id,
+                    "name": f"{member.first_name} {member.last_name}",
+                    "photo_path": member.photo_path,
+                    "capture_path": first_log_today.capture_path,
+                    "timestamp": first_log_today.timestamp,
+                    "access_type": first_log_today.access_type
+                })
+    
+    # Ordenar por tiempo descendente (más recientes primero)
+    recent.sort(key=lambda x: x["timestamp"], reverse=True)
+    return recent
+
+
 @router.get("/logs", response_model=List[AccessLogOut])
 def get_access_logs(
     member_id: Optional[int] = None,
@@ -994,10 +1045,14 @@ async def pull_device_events(
         # Mapeo por major/minor de Hikvision
         major = ev.get("major", 0)
         minor = ev.get("minor", 0)
-        
+
+        # Ignorar eventos que no son lecturas del lector (major 1=alarma, 2=puerta)
+        if major not in (3, 5):
+            continue
+
         # 5 = Access Control, 1 = Legal (Exitoso)
         result = "granted" if (major == 5 and minor == 1) else "denied"
-        
+
         access_type = "face" if major == 5 else "unknown"
         if minor == 2: access_type = "card"
         if minor == 3: access_type = "fingerprint"
@@ -1020,7 +1075,7 @@ async def pull_device_events(
                 event_type="access",
                 log_id=0, # Temporal
                 member_id=member.id if member else None,
-                member_name=member.full_name if member else (f"#{employee_no}" if employee_no else "Desconocido"),
+member_name=f"{member.first_name} {member.last_name}" if member else (f"#{employee_no}" if employee_no else "Desconocido"),
                 member_number=member.member_number if member else None,
                 photo_path=member.photo_path if member else None,
                 device_name=d.name,
@@ -1043,8 +1098,10 @@ async def pull_device_events(
 
 # ── Webhook para eventos de Hikvision ─────────────────────────────────────────
 
-@router.post("/events") # Nueva ruta según documentación del usuario
+@router.post("/events") 
 @router.post("/hikvision-webhook")
+@router.post("/ISAPI/Event/notification/httpHosts") # Ruta por defecto de algunos firmwares
+@router.post("/ISAPI/AccessControl/AcsEvent")
 async def hikvision_webhook(request: Request, db: Session = Depends(get_db)):
     """
     Endpoint para recibir eventos push de dispositivos Hikvision.
@@ -1068,22 +1125,17 @@ async def hikvision_webhook(request: Request, db: Session = Depends(get_db)):
         # 2. Intentar parsear como XML (Muy común en modo 0x3/0x1)
         try:
             root = ET.fromstring(body)
-            alert_node = root.find(".//{*}EventNotificationAlert")
-            if alert_node is None: alert_node = root
             acs = root.find(".//{*}AccessControllerEvent")
-            
             if acs is not None:
                 request_data = {
-                    "EventNotificationAlert": {
-                        "AccessControllerEvent": {
-                            "employeeNoString": acs.findtext("{*}employeeNoString") or acs.findtext(".//{*}employeeNoString"),
-                            "major": int(acs.findtext("{*}major") or 0),
-                            "minor": int(acs.findtext("{*}minor") or 0),
-                            "currentVerifyMode": acs.findtext("{*}currentVerifyMode") or "face",
-                            "status": acs.findtext("{*}status") or "success",
-                            "time": acs.findtext("{*}time"),
-                            "temperature": acs.findtext("{*}temperature"),
-                        }
+                    "AccessControllerEvent": {
+                        "employeeNoString": acs.findtext("{*}employeeNoString") or acs.findtext(".//{*}employeeNoString"),
+                        "major": int(acs.findtext("{*}major") or 0),
+                        "minor": int(acs.findtext("{*}minor") or 0),
+                        "currentVerifyMode": acs.findtext("{*}currentVerifyMode") or "face",
+                        "status": acs.findtext("{*}status") or "success",
+                        "time": acs.findtext("{*}time"),
+                        "temperature": acs.findtext("{*}temperature"),
                     }
                 }
         except: pass
@@ -1092,113 +1144,84 @@ async def hikvision_webhook(request: Request, db: Session = Depends(get_db)):
         return {"status": "unsupported_format"}
 
     try:
-        alert = request_data.get("EventNotificationAlert", {})
-        acs_event = alert.get("AccessControllerEvent", {})
+        # Recuperar capture_path si viene del monitor local
+        capture_path = request_data.get("capture_path")
         
-        employee_no = acs_event.get("employeeNoString", "")
-        major = acs_event.get("major", 0)
-        minor = acs_event.get("minor", 0)
-        status = acs_event.get("status", "success")
+        # Log para debug
+        if capture_path:
+            logger.info(f"Recibida captura de foto: {capture_path}")
         
-        # MAPEO SEGÚN DOCUMENTACIÓN DEL USUARIO (Hex 0x3/0x1 = Dec 3/1)
-        # Acceso Concedido: Major 3, Minor 1 O Major 5, Minor 1 (depende del modelo)
-        if (major == 3 and minor == 1) or (major == 5 and minor == 1) or status in ["success", "OK"]:
-            result = "granted"
-        else:
-            result = "denied"
-            
-        # Rostro no reconocido (0x3 / 0x4b -> 3 / 75)
-        if major == 3 and minor == 75:
-            result = "denied"
-            employee_no = "Desconocido"
-        door_name = acs_event.get("doorName", "")
-        event_time = acs_event.get("time", "")
-        temperature = acs_event.get("temperature", None)
+        parsed = parse_event_payload(request_data)
         
-        logger.info(f"Evento: {event_type}, EmpNo: {employee_no}, Mode: {verify_mode}, Status: {status}")
+        employee_no = parsed["employee_no"]
+        major = parsed["major"]
+        minor = parsed["minor"]
+        result = parsed["result"]
+        description = parsed["description"]
+        access_type = parsed["access_type"]
+        ts = parsed["timestamp"]
+        temperature = parsed["temperature"]
         
-        # Mapear tipo de verificación
-        access_type_map = {
-            "face": "face",
-            "card": "card", 
-            "fingerprint": "fingerprint",
-            "pin": "pin",
-            "password": "pin",
-            "faceAndCard": "face+card",
-            "cardAndFace": "card+face",
-        }
-        access_type = access_type_map.get(verify_mode.lower(), verify_mode.lower() if verify_mode else "unknown")
-        
-        # Determinar resultado
-        if status in ["success", "Success", "OK"]:
-            result = "granted"
-        else:
-            result = "denied"
+        # Ignorar eventos que no son lecturas (majors 3 y 5 son los de interés para acceso)
+        if major not in (3, 5):
+            logger.info(f"Evento ignorado: {description} (Maj={major}, Min={minor})")
+            return {"status": "ok"}
+
+        logger.info(f"Evento procesado: {description} -> Resultado: {result}")
         
         # Buscar miembro
         member = None
         if employee_no:
-            try:
-                member = db.query(Member).filter(Member.id == int(employee_no)).first()
-            except (ValueError, TypeError):
-                # Buscar por número de tarjeta
-                member = db.query(Member).filter(Member.hikvision_card_no == str(employee_no)).first()
-                if not member:
-                    member = db.query(Member).filter(Member.member_number == str(employee_no)).first()
+            emp_str = str(employee_no)
+            member = db.query(Member).filter(
+                (Member.hikvision_card_no == emp_str) | 
+                (Member.member_number == emp_str) |
+                (Member.id == (int(employee_no) if employee_no.isdigit() else -1))
+            ).first()
         
-        # Determinar dirección
-        direction_str = "in" if direction in [1, "1", "in"] else "out"
+        # Identificar dispositivo
+        device = db.query(HikvisionDevice).filter(HikvisionDevice.ip_address == client_host).first()
+        if not device:
+            device = db.query(HikvisionDevice).filter(HikvisionDevice.is_active == True).first()
         
         # Guardar en BD
         log = AccessLog(
             member_id=member.id if member else None,
-            device_id=None,  # TODO: mapear si hay múltiples dispositivos
-            direction=direction_str,
+            device_id=device.id if device else None,
+            direction="in",
             access_type=access_type,
             result=result,
             temperature=temperature,
             raw_event=json.dumps(request_data),
+            capture_path=capture_path,
+            timestamp=ts
         )
         db.add(log)
         db.commit()
         db.refresh(log)
         
-        # Buscar dispositivo por IP (el host que envía el webhook)
-        device_ip = request.client.host
-        device = db.query(HikvisionDevice).filter(
-            (HikvisionDevice.ip_address == device_ip) | 
-            (HikvisionDevice.is_active == True)
-        ).first()
-        
-        if device and device.ip_address != device_ip:
-            logger.info(f"Petición desde {device_ip}, pero se usará el primer dispositivo activo: {device.name}")
-        elif device:
-            logger.info(f"Dispositivo identificado: {device.name} ({device.ip_address})")
-        else:
-            logger.warning(f"No se encontró dispositivo para la IP {device_ip}")
-        
         # Enviar por WebSocket
-        event = AccessEventWS(
+        ws_payload = AccessEventWS(
             event_type="access",
             log_id=log.id,
             member_id=member.id if member else None,
             member_name=member.full_name if member else (f"#{employee_no}" if employee_no else "Desconocido"),
             member_number=member.member_number if member else None,
             photo_path=member.photo_path if member else None,
-            device_name=device.name if device else "Dispositivo",
-            device_location=device.location if device and device.location else door_name,
-            direction=direction_str,
+            device_name=device.name if device else "Dispositivo Hikvision",
+            device_location=device.location if device and device.location else "Entrada",
+            direction="in",
             result=result,
             access_type=access_type,
             temperature=temperature,
-            timestamp=log.timestamp.isoformat(),
+            timestamp=ts.strftime("%Y-%m-%dT%H:%M:%S")
         )
-        await ws_manager.broadcast(event.model_dump())
         
-        logger.info(f"Evento recibido: {access_type} - {member.full_name if member else employee_no} - {result}")
+        await ws_manager.broadcast(ws_payload.model_dump())
 
     except Exception as e:
         logger.error(f"Error procesando webhook Hikvision: {e}")
+        return {"status": "ok"}
 
     return {"status": "ok"}
 

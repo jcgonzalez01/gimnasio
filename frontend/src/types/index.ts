@@ -196,3 +196,63 @@ export interface DashboardStats {
   low_stock_products: number
   memberships_expiring_soon: number
 }
+
+export interface ReportsDashboardStats {
+  today_access: number
+  today_granted: number
+  today_denied: number
+  today_sales: number
+  total_members: number
+  active_members: number
+  low_stock_products: number
+}
+
+export interface DailyStats {
+  date: string
+  access_count: number
+  access_granted: number
+  access_denied: number
+  sales_count: number
+  sales_total: number
+  new_members: number
+}
+
+export interface TopMember {
+  member_id: number
+  member_name: string
+  member_number: string
+  visits: number
+}
+
+export interface TopProduct {
+  product_id: number
+  product_name: string
+  quantity_sold: number
+  total_sales: number
+}
+
+export interface AccessReport {
+  id: number
+  member_name?: string
+  member_number?: string
+  direction: string
+  access_type: string
+  result: string
+  timestamp: string
+}
+
+export interface SalesReport {
+  id: number
+  sale_number: string
+  member_name?: string
+  total: number
+  items_count: number
+  payment_method: string
+  created_at: string
+}
+
+export interface ReportsSummary {
+  period: { start: string; end: string }
+  access: { total: number; granted: number; denied: number }
+  sales: { total: number; amount: number; average: number }
+}

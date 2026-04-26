@@ -1,0 +1,1612 @@
+
+--- 2026-04-23 14:26:52.620295 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-23T10:25:38-04:00", "doorNo": 1, "type": 0, "serialNo": 480, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-23 14:27:23.939503 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-23T10:27:20-04:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "type": 0, "serialNo": 481, "userType": "normal", "currentVerifyMode": "cardOrFaceOrFp", "mask": "no", "FaceRect": {"height": 0.531, "width": 0.298, "x": 0.247, "y": 0.205}}}}
+------------------------------------------
+
+--- 2026-04-23 14:27:27.439297 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-23T10:27:25-04:00", "doorNo": 1, "type": 0, "serialNo": 483, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-23 14:27:31.129921 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-23T10:27:27-04:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "type": 0, "serialNo": 484, "userType": "normal", "currentVerifyMode": "cardOrFaceOrFp", "mask": "no", "FaceRect": {"height": 0.497, "width": 0.28, "x": 0.31, "y": 0.22}}}}
+------------------------------------------
+
+--- 2026-04-23 14:27:34.601446 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-23T10:27:32-04:00", "doorNo": 1, "type": 0, "serialNo": 486, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-23 14:28:26.892474 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-23T10:28:19-04:00", "doorNo": 1, "type": 0, "serialNo": 489, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-23 14:29:37.019149 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-23T10:29:33-04:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "type": 0, "serialNo": 490, "userType": "normal", "currentVerifyMode": "cardOrFaceOrFp", "mask": "no", "FaceRect": {"height": 0.5, "width": 0.281, "x": 0.019, "y": 0.23}}}}
+------------------------------------------
+
+--- 2026-04-23 14:29:40.468645 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-23T10:29:38-04:00", "doorNo": 1, "type": 0, "serialNo": 492, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-23 14:36:36.896615 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-23T10:36:32-04:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "type": 0, "serialNo": 493, "userType": "normal", "currentVerifyMode": "cardOrFaceOrFp", "mask": "no", "FaceRect": {"height": 0.531, "width": 0.299, "x": 0.133, "y": 0.257}}}}
+------------------------------------------
+
+--- 2026-04-23 14:37:06.115037 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-23T10:37:04-04:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "type": 0, "serialNo": 494, "userType": "normal", "currentVerifyMode": "cardOrFaceOrFp", "mask": "no", "FaceRect": {"height": 0.525, "width": 0.295, "x": 0.208, "y": 0.315}}}}
+------------------------------------------
+
+--- 2026-04-23 14:37:13.194983 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-23T10:37:08-04:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "type": 0, "serialNo": 495, "userType": "normal", "currentVerifyMode": "cardOrFaceOrFp", "mask": "no", "FaceRect": {"height": 0.518, "width": 0.291, "x": 0.178, "y": 0.305}}}}
+------------------------------------------
+
+--- 2026-04-23 14:38:00.197797 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-23T10:37:57-04:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "type": 0, "serialNo": 496, "userType": "normal", "currentVerifyMode": "cardOrFaceOrFp", "mask": "no", "FaceRect": {"height": 0.534, "width": 0.3, "x": 0.177, "y": 0.27}}}}
+------------------------------------------
+
+--- 2026-04-23 14:38:04.174586 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-23T10:38:00-04:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "type": 0, "serialNo": 497, "userType": "normal", "currentVerifyMode": "cardOrFaceOrFp", "mask": "no", "FaceRect": {"height": 0.56, "width": 0.315, "x": 0.06, "y": 0.232}}}}
+------------------------------------------
+
+--- 2026-04-23 14:38:54.929548 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-23T10:38:50-04:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "type": 0, "serialNo": 498, "userType": "normal", "currentVerifyMode": "cardOrFaceOrFp", "mask": "no", "FaceRect": {"height": 0.561, "width": 0.315, "x": 0.155, "y": 0.3}}}}
+------------------------------------------
+
+--- 2026-04-23 14:38:59.269876 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-23T10:38:53-04:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "type": 0, "serialNo": 499, "userType": "normal", "currentVerifyMode": "cardOrFaceOrFp", "mask": "no", "FaceRect": {"height": 0.546, "width": 0.307, "x": 0.157, "y": 0.313}}}}
+------------------------------------------
+
+--- 2026-04-23 14:39:07.561943 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-23T10:39:04-04:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "type": 0, "serialNo": 500, "userType": "normal", "currentVerifyMode": "cardOrFaceOrFp", "mask": "no", "FaceRect": {"height": 0.472, "width": 0.265, "x": 0.053, "y": 0.227}}}}
+------------------------------------------
+
+--- 2026-04-23 14:39:11.662283 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-23T10:39:07-04:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "type": 0, "serialNo": 501, "userType": "normal", "currentVerifyMode": "cardOrFaceOrFp", "mask": "no", "FaceRect": {"height": 0.594, "width": 0.334, "x": 0.043, "y": 0.278}}}}
+------------------------------------------
+
+--- 2026-04-23 14:39:53.430653 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-23T10:39:49-04:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "type": 0, "serialNo": 502, "userType": "normal", "currentVerifyMode": "cardOrFaceOrFp", "mask": "no", "FaceRect": {"height": 0.639, "width": 0.36, "x": 0.032, "y": 0.087}}}}
+------------------------------------------
+
+--- 2026-04-23 14:39:57.996459 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-23T10:39:53-04:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "type": 0, "serialNo": 503, "userType": "normal", "currentVerifyMode": "cardOrFaceOrFp", "mask": "no", "FaceRect": {"height": 0.548, "width": 0.283, "x": 0.084, "y": 0.216}}}}
+------------------------------------------
+
+--- 2026-04-23 14:40:59.503105 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-23T10:40:54-04:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "type": 0, "serialNo": 504, "userType": "normal", "currentVerifyMode": "cardOrFaceOrFp", "mask": "no", "FaceRect": {"height": 0.482, "width": 0.271, "x": 0.2, "y": 0.318}}}}
+------------------------------------------
+
+--- 2026-04-23 14:42:58.791549 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 2, "minor": 1031, "time": "2026-04-23T10:42:10-04:00", "type": 0, "serialNo": 506, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-23 14:43:04.929257 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 2, "minor": 1031, "time": "2026-04-23T10:43:03-04:00", "type": 0, "serialNo": 508, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-23 14:51:50.040076 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 21, "time": "2026-04-23T10:51:47-04:00", "doorNo": 1, "type": 0, "serialNo": 510, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-23 14:51:53.277054 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-23T10:51:52-04:00", "doorNo": 1, "type": 0, "serialNo": 511, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-23 14:54:42.275072 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-23T10:54:39-04:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "type": 0, "serialNo": 512, "userType": "normal", "currentVerifyMode": "cardOrFaceOrFp", "mask": "no", "FaceRect": {"height": 0.526, "width": 0.295, "x": 0.099, "y": 0.195}}}}
+------------------------------------------
+
+--- 2026-04-23 14:54:46.667651 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-23T10:54:42-04:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "type": 0, "serialNo": 514, "userType": "normal", "currentVerifyMode": "cardOrFaceOrFp", "mask": "no", "FaceRect": {"height": 0.632, "width": 0.356, "x": 0.092, "y": 0.234}}}}
+------------------------------------------
+
+--- 2026-04-23 18:29:18.372794 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 3, "minor": 80, "time": "2026-04-24T02:29:37+08:00", "serialNo": 14, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-23 18:30:31.808737 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-24T02:30:52+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 15, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.71, "width": 0.375, "x": 0.322, "y": 0.149}}}}
+------------------------------------------
+
+--- 2026-04-23 18:30:38.049638 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-24T02:30:57+08:00", "doorNo": 1, "serialNo": 17, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-23 18:30:47.256725 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-24T02:31:07+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 18, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.424, "width": 0.292, "x": 0.367, "y": 0.564}}}}
+------------------------------------------
+
+--- 2026-04-23 18:30:53.483396 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-24T02:31:12+08:00", "doorNo": 1, "serialNo": 20, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-23 18:31:11.869352 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 21, "time": "2026-04-24T02:31:32+08:00", "doorNo": 1, "serialNo": 22, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-23 18:31:18.010053 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-24T02:31:37+08:00", "doorNo": 1, "serialNo": 23, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-23 18:31:22.011237 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-24T02:31:37+08:00", "doorNo": 1, "serialNo": 23, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-23 18:31:56.200049 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 21, "time": "2026-04-24T02:32:16+08:00", "doorNo": 1, "serialNo": 25, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-23 18:31:58.223259 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-24T02:32:16+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 24, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.491, "width": 0.311, "x": 0.309, "y": 0.496}}}}
+------------------------------------------
+
+--- 2026-04-23 18:32:01.317520 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-24T02:32:21+08:00", "doorNo": 1, "serialNo": 26, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-23 18:32:02.406212 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-24T02:32:21+08:00", "doorNo": 1, "serialNo": 26, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-23 18:45:10.807991 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-24T02:45:31+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 27, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.454, "width": 0.311, "x": 0.316, "y": 0.534}}}}
+------------------------------------------
+
+--- 2026-04-23 18:45:11.386799 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-24T02:45:31+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 27, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.454, "width": 0.311, "x": 0.316, "y": 0.534}}}}
+------------------------------------------
+
+--- 2026-04-23 18:45:16.929520 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-24T02:45:36+08:00", "doorNo": 1, "serialNo": 29, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-23 18:45:17.479501 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-24T02:45:36+08:00", "doorNo": 1, "serialNo": 29, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 02:21:35.875825 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-25T10:21:54+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 190, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.315, "width": 0.177, "x": 0.393, "y": 0.115}}}}
+------------------------------------------
+
+--- 2026-04-25 02:21:42.041244 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T10:21:59+08:00", "doorNo": 1, "serialNo": 193, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 02:21:45.141630 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-25T10:22:01+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 194, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.37, "y": 0.17}}}}
+------------------------------------------
+
+--- 2026-04-25 02:21:48.248765 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T10:22:06+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 196, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.421, "y": 0.207}}}}
+------------------------------------------
+
+--- 2026-04-25 02:22:00.570880 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T10:22:17+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 198, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.138, "x": 0.42, "y": 0.221}}}}
+------------------------------------------
+
+--- 2026-04-25 02:22:19.072117 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T10:22:37+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 199, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.438, "y": 0.257}}}}
+------------------------------------------
+
+--- 2026-04-25 02:22:25.432699 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 3, "minor": 112, "time": "2026-04-25T10:22:42+08:00", "remoteHostAddr": "192.168.1.10", "serialNo": 200, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 02:22:28.533970 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T10:22:44+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 201, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.434, "y": 0.251}}}}
+------------------------------------------
+
+--- 2026-04-25 02:22:56.522390 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-25T10:23:12+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 202, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.369, "y": 0.236}}}}
+------------------------------------------
+
+--- 2026-04-25 02:22:59.635496 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T10:23:17+08:00", "doorNo": 1, "serialNo": 204, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 02:23:55.349082 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 21, "time": "2026-04-25T10:23:54+08:00", "doorNo": 1, "serialNo": 207, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 02:24:01.571428 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T10:23:59+08:00", "doorNo": 1, "serialNo": 208, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 02:24:04.665380 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 76, "time": "2026-04-25T10:24:19+08:00", "cardType": 1, "cardReaderNo": 1, "doorNo": 1, "serialNo": 210, "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.379, "y": 0.25}}}}
+------------------------------------------
+
+--- 2026-04-25 02:24:08.793051 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-25T10:24:22+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 211, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.353, "y": 0.217}}}}
+------------------------------------------
+
+--- 2026-04-25 02:24:21.202280 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T10:24:27+08:00", "doorNo": 1, "serialNo": 213, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 02:24:39.730674 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 21, "time": "2026-04-25T10:24:52+08:00", "doorNo": 1, "serialNo": 215, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 02:24:45.929153 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T10:24:57+08:00", "doorNo": 1, "serialNo": 216, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 02:25:13.698187 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 21, "time": "2026-04-25T10:25:01+08:00", "doorNo": 1, "serialNo": 219, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 02:25:41.414418 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T10:25:06+08:00", "doorNo": 1, "serialNo": 220, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 02:25:56.962242 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-25T10:25:07+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 221, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.315, "width": 0.177, "x": 0.291, "y": 0.161}}}}
+------------------------------------------
+
+--- 2026-04-25 02:26:03.153704 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T10:25:12+08:00", "doorNo": 1, "serialNo": 223, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 02:26:18.648015 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 76, "time": "2026-04-25T10:25:47+08:00", "cardType": 1, "cardReaderNo": 1, "doorNo": 1, "serialNo": 224, "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.355, "y": 0.234}}}}
+------------------------------------------
+
+--- 2026-04-25 02:26:21.752943 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 21, "time": "2026-04-25T10:26:24+08:00", "doorNo": 1, "serialNo": 226, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 02:26:24.914934 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T10:26:29+08:00", "doorNo": 1, "serialNo": 228, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 02:26:55.750422 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T10:26:38+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 229, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.348, "y": 0.214}}}}
+------------------------------------------
+
+--- 2026-04-25 02:28:09.445918 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T10:28:25+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 230, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.349, "y": 0.196}}}}
+------------------------------------------
+
+--- 2026-04-25 02:28:12.554834 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T10:28:29+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 231, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.35, "y": 0.204}}}}
+------------------------------------------
+
+--- 2026-04-25 02:28:18.732972 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T10:28:36+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 232, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.349, "y": 0.196}}}}
+------------------------------------------
+
+--- 2026-04-25 02:28:21.885189 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-25T10:28:39+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 233, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.315, "width": 0.177, "x": 0.323, "y": 0.196}}}}
+------------------------------------------
+
+--- 2026-04-25 02:28:28.047561 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T10:28:44+08:00", "doorNo": 1, "serialNo": 235, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 02:32:03.497846 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-25T10:32:21+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 236, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.32, "y": 0.186}}}}
+------------------------------------------
+
+--- 2026-04-25 02:32:09.829378 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T10:32:26+08:00", "doorNo": 1, "serialNo": 238, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 02:35:48.923030 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 76, "time": "2026-04-25T10:36:06+08:00", "cardType": 1, "cardReaderNo": 1, "doorNo": 1, "serialNo": 239, "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.123, "width": 0.069, "x": 0.437, "y": 0.12}}}}
+------------------------------------------
+
+--- 2026-04-25 02:51:04.273254 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T10:51:20+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 240, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.417, "y": 0.227}}}}
+------------------------------------------
+
+--- 2026-04-25 02:51:07.381627 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T10:51:25+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 241, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.412, "y": 0.245}}}}
+------------------------------------------
+
+--- 2026-04-25 02:51:13.524153 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T10:51:29+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 242, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.157, "y": 0.256}}}}
+------------------------------------------
+
+--- 2026-04-25 02:51:16.603227 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T10:51:32+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 243, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.154, "y": 0.252}}}}
+------------------------------------------
+
+--- 2026-04-25 02:51:19.750404 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T10:51:36+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 244, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.159, "y": 0.259}}}}
+------------------------------------------
+
+--- 2026-04-25 02:52:39.334333 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-25T10:52:57+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 245, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.437, "y": 0.255}}}}
+------------------------------------------
+
+--- 2026-04-25 02:52:43.063274 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T10:53:00+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 247, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.446, "y": 0.252}}}}
+------------------------------------------
+
+--- 2026-04-25 02:52:46.158992 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T10:53:02+08:00", "doorNo": 1, "serialNo": 248, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 02:53:16.872252 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T10:53:34+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 249, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.431, "y": 0.233}}}}
+------------------------------------------
+
+--- 2026-04-25 02:53:19.980378 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T10:53:37+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 250, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.431, "y": 0.23}}}}
+------------------------------------------
+
+--- 2026-04-25 02:53:23.088973 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T10:53:41+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 251, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.429, "y": 0.235}}}}
+------------------------------------------
+
+--- 2026-04-25 02:53:29.261460 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T10:53:44+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 252, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.425, "y": 0.223}}}}
+------------------------------------------
+
+--- 2026-04-25 02:53:32.369434 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T10:53:48+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 253, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.434, "y": 0.232}}}}
+------------------------------------------
+
+--- 2026-04-25 02:54:24.566681 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T10:54:40+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 254, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.053, "y": 0.241}}}}
+------------------------------------------
+
+--- 2026-04-25 02:54:27.660055 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T10:54:45+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 255, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.064, "y": 0.253}}}}
+------------------------------------------
+
+--- 2026-04-25 02:55:07.518920 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T10:55:24+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 256, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.074, "y": 0.214}}}}
+------------------------------------------
+
+--- 2026-04-25 02:55:16.849646 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T10:55:33+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 257, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.077, "y": 0.216}}}}
+------------------------------------------
+
+--- 2026-04-25 02:55:26.221889 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T10:55:41+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 258, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.083, "y": 0.219}}}}
+------------------------------------------
+
+--- 2026-04-25 02:57:23.215288 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T10:57:41+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 259, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.347, "y": 0.246}}}}
+------------------------------------------
+
+--- 2026-04-25 02:59:48.387511 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 76, "time": "2026-04-25T11:00:03+08:00", "cardType": 1, "cardReaderNo": 1, "doorNo": 1, "serialNo": 260, "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.084, "width": 0.047, "x": 0.586, "y": 0.282}}}}
+------------------------------------------
+
+--- 2026-04-25 03:00:34.398889 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-25T11:00:50+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 261, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.361, "y": 0.194}}}}
+------------------------------------------
+
+--- 2026-04-25 03:00:37.475444 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-25T11:00:53+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 263, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.203, "width": 0.114, "x": 0.292, "y": 0.227}}}}
+------------------------------------------
+
+--- 2026-04-25 03:00:40.547256 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T11:00:58+08:00", "doorNo": 1, "serialNo": 264, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:00:46.682422 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:01:02+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 265, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.203, "width": 0.114, "x": 0.352, "y": 0.262}}}}
+------------------------------------------
+
+--- 2026-04-25 03:00:49.802431 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:01:06+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 266, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.216, "width": 0.121, "x": 0.352, "y": 0.254}}}}
+------------------------------------------
+
+--- 2026-04-25 03:00:53.019043 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:01:09+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 267, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.203, "width": 0.114, "x": 0.353, "y": 0.267}}}}
+------------------------------------------
+
+--- 2026-04-25 03:00:59.190481 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:01:17+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 268, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.216, "width": 0.121, "x": 0.352, "y": 0.264}}}}
+------------------------------------------
+
+--- 2026-04-25 03:01:02.270570 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-25T11:01:20+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 269, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.363, "y": 0.271}}}}
+------------------------------------------
+
+--- 2026-04-25 03:01:08.411007 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T11:01:25+08:00", "doorNo": 1, "serialNo": 271, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:01:39.060352 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:01:56+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 272, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.391, "y": 0.243}}}}
+------------------------------------------
+
+--- 2026-04-25 03:01:42.145634 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:01:59+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 273, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.129, "x": 0.377, "y": 0.212}}}}
+------------------------------------------
+
+--- 2026-04-25 03:03:17.301352 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:03:34+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 274, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.377, "y": 0.226}}}}
+------------------------------------------
+
+--- 2026-04-25 03:03:23.453694 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:03:39+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 275, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.138, "x": 0.374, "y": 0.22}}}}
+------------------------------------------
+
+--- 2026-04-25 03:03:26.542164 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:03:44+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 276, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.391, "y": 0.218}}}}
+------------------------------------------
+
+--- 2026-04-25 03:03:29.650156 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:03:47+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 277, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.379, "y": 0.213}}}}
+------------------------------------------
+
+--- 2026-04-25 03:03:35.802296 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:03:51+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 278, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.381, "y": 0.223}}}}
+------------------------------------------
+
+--- 2026-04-25 03:03:38.895257 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:03:54+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 279, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.376, "y": 0.227}}}}
+------------------------------------------
+
+--- 2026-04-25 03:04:09.613272 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:04:26+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 280, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.356, "y": 0.225}}}}
+------------------------------------------
+
+--- 2026-04-25 03:04:12.683189 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:04:30+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 281, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.386, "y": 0.243}}}}
+------------------------------------------
+
+--- 2026-04-25 03:04:21.912683 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:04:37+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 282, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.382, "y": 0.219}}}}
+------------------------------------------
+
+--- 2026-04-25 03:04:28.084952 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:04:46+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 283, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.376, "y": 0.227}}}}
+------------------------------------------
+
+--- 2026-04-25 03:04:34.236732 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:04:49+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 284, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.375, "y": 0.206}}}}
+------------------------------------------
+
+--- 2026-04-25 03:04:46.511845 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:05:02+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 285, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.37, "y": 0.224}}}}
+------------------------------------------
+
+--- 2026-04-25 03:04:52.649004 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:05:10+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 286, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.366, "y": 0.233}}}}
+------------------------------------------
+
+--- 2026-04-25 03:04:58.825162 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:05:14+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 287, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.372, "y": 0.231}}}}
+------------------------------------------
+
+--- 2026-04-25 03:05:01.935456 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:05:17+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 288, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.358, "y": 0.219}}}}
+------------------------------------------
+
+--- 2026-04-25 03:05:35.648147 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:05:21+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 289, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.362, "y": 0.215}}}}
+------------------------------------------
+
+--- 2026-04-25 03:05:41.833501 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:05:24+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 290, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.363, "y": 0.212}}}}
+------------------------------------------
+
+--- 2026-04-25 03:05:48.018965 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:05:28+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 291, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.363, "y": 0.209}}}}
+------------------------------------------
+
+--- 2026-04-25 03:05:51.102567 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:05:59+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 292, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.138, "x": 0.361, "y": 0.219}}}}
+------------------------------------------
+
+--- 2026-04-25 03:05:54.232857 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:06:03+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 293, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.359, "y": 0.236}}}}
+------------------------------------------
+
+--- 2026-04-25 03:05:57.333123 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:06:14+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 294, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.356, "y": 0.221}}}}
+------------------------------------------
+
+--- 2026-04-25 03:06:28.147788 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 76, "time": "2026-04-25T11:06:25+08:00", "cardType": 1, "cardReaderNo": 1, "doorNo": 1, "serialNo": 295, "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.424, "y": 0.286}}}}
+------------------------------------------
+
+--- 2026-04-25 03:06:49.604436 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:06:29+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 298, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.387, "y": 0.247}}}}
+------------------------------------------
+
+--- 2026-04-25 03:06:52.709449 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T11:06:30+08:00", "doorNo": 1, "serialNo": 299, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:07:05.020993 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:06:32+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 300, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.393, "y": 0.251}}}}
+------------------------------------------
+
+--- 2026-04-25 03:07:11.181609 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:06:36+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 301, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.393, "y": 0.253}}}}
+------------------------------------------
+
+--- 2026-04-25 03:07:17.337649 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:06:39+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 302, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.391, "y": 0.253}}}}
+------------------------------------------
+
+--- 2026-04-25 03:07:20.449326 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:06:43+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 303, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.377, "y": 0.241}}}}
+------------------------------------------
+
+--- 2026-04-25 03:07:23.604731 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:06:46+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 304, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.376, "y": 0.244}}}}
+------------------------------------------
+
+--- 2026-04-25 03:07:26.694228 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:06:50+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 305, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.375, "y": 0.242}}}}
+------------------------------------------
+
+--- 2026-04-25 03:07:29.777055 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:07:10+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 306, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.371, "y": 0.24}}}}
+------------------------------------------
+
+--- 2026-04-25 03:08:00.413326 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:07:18+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 307, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.366, "y": 0.236}}}}
+------------------------------------------
+
+--- 2026-04-25 03:08:06.590286 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:07:26+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 308, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.379, "y": 0.243}}}}
+------------------------------------------
+
+--- 2026-04-25 03:08:15.782335 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:07:29+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 309, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.377, "y": 0.246}}}}
+------------------------------------------
+
+--- 2026-04-25 03:08:28.067085 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:08:40+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 312, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.088, "y": 0.232}}}}
+------------------------------------------
+
+--- 2026-04-25 03:08:31.216966 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:08:47+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 313, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.103, "y": 0.244}}}}
+------------------------------------------
+
+--- 2026-04-25 03:08:34.301056 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-25T11:08:49+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 314, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.064, "y": 0.238}}}}
+------------------------------------------
+
+--- 2026-04-25 03:08:37.405527 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T11:08:54+08:00", "doorNo": 1, "serialNo": 316, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:08:46.707801 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:08:58+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 318, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.092, "y": 0.227}}}}
+------------------------------------------
+
+--- 2026-04-25 03:08:49.798838 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:09:01+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 319, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.098, "y": 0.238}}}}
+------------------------------------------
+
+--- 2026-04-25 03:08:52.895977 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:09:05+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 320, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.101, "y": 0.251}}}}
+------------------------------------------
+
+--- 2026-04-25 03:09:11.363699 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:09:08+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 321, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.104, "y": 0.256}}}}
+------------------------------------------
+
+--- 2026-04-25 03:09:20.640470 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:09:12+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 322, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.103, "y": 0.256}}}}
+------------------------------------------
+
+--- 2026-04-25 03:09:29.870065 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 21, "time": "2026-04-25T11:09:13+08:00", "doorNo": 1, "serialNo": 324, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:10:22.048948 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T11:09:18+08:00", "doorNo": 1, "serialNo": 325, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:10:43.530535 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:09:22+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 327, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.129, "x": 0.104, "y": 0.241}}}}
+------------------------------------------
+
+--- 2026-04-25 03:10:49.694903 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:09:25+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 328, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.104, "y": 0.253}}}}
+------------------------------------------
+
+--- 2026-04-25 03:10:52.805915 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:09:34+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 330, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.099, "y": 0.235}}}}
+------------------------------------------
+
+--- 2026-04-25 03:10:55.942156 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:09:41+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 332, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.099, "y": 0.241}}}}
+------------------------------------------
+
+--- 2026-04-25 03:11:02.250252 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:09:48+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 334, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.093, "y": 0.243}}}}
+------------------------------------------
+
+--- 2026-04-25 03:11:08.455470 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:11:06+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 335, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.085, "y": 0.229}}}}
+------------------------------------------
+
+--- 2026-04-25 03:11:11.544893 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:11:10+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 336, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.081, "y": 0.231}}}}
+------------------------------------------
+
+--- 2026-04-25 03:11:14.673323 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:11:29+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 339, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.071, "y": 0.213}}}}
+------------------------------------------
+
+--- 2026-04-25 03:11:26.939161 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:11:44+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 340, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.076, "y": 0.222}}}}
+------------------------------------------
+
+--- 2026-04-25 03:11:30.027054 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:11:48+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 341, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.076, "y": 0.224}}}}
+------------------------------------------
+
+--- 2026-04-25 03:11:36.202339 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:11:51+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 342, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.075, "y": 0.224}}}}
+------------------------------------------
+
+--- 2026-04-25 03:11:39.291732 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:11:55+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 343, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.075, "y": 0.226}}}}
+------------------------------------------
+
+--- 2026-04-25 03:11:51.588796 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:12:07+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 344, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.088, "y": 0.235}}}}
+------------------------------------------
+
+--- 2026-04-25 03:11:57.721746 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:12:14+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 345, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.091, "y": 0.248}}}}
+------------------------------------------
+
+--- 2026-04-25 03:12:00.833247 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:12:17+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 346, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.092, "y": 0.249}}}}
+------------------------------------------
+
+--- 2026-04-25 03:12:03.920224 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:12:21+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 347, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.089, "y": 0.253}}}}
+------------------------------------------
+
+--- 2026-04-25 03:12:07.042798 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:12:24+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 348, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.085, "y": 0.257}}}}
+------------------------------------------
+
+--- 2026-04-25 03:12:13.205078 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:12:29+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 349, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.083, "y": 0.244}}}}
+------------------------------------------
+
+--- 2026-04-25 03:13:08.523750 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:12:33+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 350, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.081, "y": 0.242}}}}
+------------------------------------------
+
+--- 2026-04-25 03:13:11.614762 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:12:37+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 351, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.074, "y": 0.228}}}}
+------------------------------------------
+
+--- 2026-04-25 03:13:14.741424 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:12:40+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 352, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.09, "y": 0.253}}}}
+------------------------------------------
+
+--- 2026-04-25 03:13:23.971740 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:12:49+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 353, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.085, "y": 0.234}}}}
+------------------------------------------
+
+--- 2026-04-25 03:13:30.141704 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:12:59+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 354, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.07, "y": 0.209}}}}
+------------------------------------------
+
+--- 2026-04-25 03:13:45.505833 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:13:02+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 355, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.066, "y": 0.207}}}}
+------------------------------------------
+
+--- 2026-04-25 03:13:51.645624 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:13:06+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 356, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.07, "y": 0.216}}}}
+------------------------------------------
+
+--- 2026-04-25 03:13:54.742627 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:13:13+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 357, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.074, "y": 0.236}}}}
+------------------------------------------
+
+--- 2026-04-25 03:13:57.864436 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:13:20+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 358, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.07, "y": 0.235}}}}
+------------------------------------------
+
+--- 2026-04-25 03:14:10.173497 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:13:24+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 359, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.07, "y": 0.231}}}}
+------------------------------------------
+
+--- 2026-04-25 03:14:16.326691 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:13:27+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 360, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.071, "y": 0.231}}}}
+------------------------------------------
+
+--- 2026-04-25 03:14:19.429084 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:13:31+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 361, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.071, "y": 0.236}}}}
+------------------------------------------
+
+--- 2026-04-25 03:14:22.531828 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:13:34+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 362, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.08, "y": 0.234}}}}
+------------------------------------------
+
+--- 2026-04-25 03:14:25.695879 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:14:04+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 363, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.034, "y": 0.251}}}}
+------------------------------------------
+
+--- 2026-04-25 03:14:31.910620 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:14:41+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 364, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.026, "y": 0.265}}}}
+------------------------------------------
+
+--- 2026-04-25 03:14:34.996027 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:14:44+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 365, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.021, "y": 0.256}}}}
+------------------------------------------
+
+--- 2026-04-25 03:14:38.097987 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:14:51+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 366, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.014, "y": 0.25}}}}
+------------------------------------------
+
+--- 2026-04-25 03:15:08.823617 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:15:25+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 367, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.016, "y": 0.255}}}}
+------------------------------------------
+
+--- 2026-04-25 03:15:11.911142 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:15:30+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 368, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.016, "y": 0.259}}}}
+------------------------------------------
+
+--- 2026-04-25 03:15:14.981975 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:15:33+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 369, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.016, "y": 0.257}}}}
+------------------------------------------
+
+--- 2026-04-25 03:15:42.540490 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:16:01+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 370, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.013, "y": 0.244}}}}
+------------------------------------------
+
+--- 2026-04-25 03:16:07.097444 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:16:24+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 371, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.39, "y": 0.248}}}}
+------------------------------------------
+
+--- 2026-04-25 03:16:13.228147 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:16:31+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 372, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.38, "y": 0.225}}}}
+------------------------------------------
+
+--- 2026-04-25 03:16:19.381397 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:16:37+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 373, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.38, "y": 0.203}}}}
+------------------------------------------
+
+--- 2026-04-25 03:16:25.629449 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:16:43+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 374, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.38, "y": 0.234}}}}
+------------------------------------------
+
+--- 2026-04-25 03:16:31.767970 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 76, "time": "2026-04-25T11:16:50+08:00", "cardType": 1, "cardReaderNo": 1, "doorNo": 1, "serialNo": 375, "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.354, "y": 0.245}}}}
+------------------------------------------
+
+--- 2026-04-25 03:16:34.860533 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:16:53+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 376, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.393, "y": 0.249}}}}
+------------------------------------------
+
+--- 2026-04-25 03:16:41.055379 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:16:57+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 377, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.394, "y": 0.252}}}}
+------------------------------------------
+
+--- 2026-04-25 03:16:44.139344 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:17:00+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 378, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.384, "y": 0.256}}}}
+------------------------------------------
+
+--- 2026-04-25 03:16:47.227164 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:17:04+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 379, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.387, "y": 0.26}}}}
+------------------------------------------
+
+--- 2026-04-25 03:16:50.335310 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:17:07+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 380, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.385, "y": 0.26}}}}
+------------------------------------------
+
+--- 2026-04-25 03:16:53.440193 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:17:10+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 381, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.381, "y": 0.25}}}}
+------------------------------------------
+
+--- 2026-04-25 03:17:27.363892 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:17:14+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 382, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.373, "y": 0.234}}}}
+------------------------------------------
+
+--- 2026-04-25 03:17:33.601455 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:17:17+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 383, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.372, "y": 0.236}}}}
+------------------------------------------
+
+--- 2026-04-25 03:17:36.853145 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:17:21+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 384, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.371, "y": 0.237}}}}
+------------------------------------------
+
+--- 2026-04-25 03:18:04.506806 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:17:25+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 385, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.376, "y": 0.243}}}}
+------------------------------------------
+
+--- 2026-04-25 03:18:25.969966 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:17:28+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 386, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.375, "y": 0.236}}}}
+------------------------------------------
+
+--- 2026-04-25 03:18:32.221391 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:17:32+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 387, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.375, "y": 0.24}}}}
+------------------------------------------
+
+--- 2026-04-25 03:18:38.419484 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 21, "time": "2026-04-25T11:17:45+08:00", "doorNo": 1, "serialNo": 389, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:18:56.850141 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-25T11:17:47+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 391, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.351, "y": 0.248}}}}
+------------------------------------------
+
+--- 2026-04-25 03:18:59.954375 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T11:17:52+08:00", "doorNo": 1, "serialNo": 392, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:19:06.103147 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:17:56+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 394, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.377, "y": 0.242}}}}
+------------------------------------------
+
+--- 2026-04-25 03:19:09.197564 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:18:04+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 395, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.373, "y": 0.237}}}}
+------------------------------------------
+
+--- 2026-04-25 03:19:12.288095 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 21, "time": "2026-04-25T11:18:14+08:00", "doorNo": 1, "serialNo": 397, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:19:18.430375 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T11:18:19+08:00", "doorNo": 1, "serialNo": 399, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:19:27.679130 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:18:22+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 400, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.38, "y": 0.222}}}}
+------------------------------------------
+
+--- 2026-04-25 03:19:33.859419 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 21, "time": "2026-04-25T11:18:23+08:00", "doorNo": 1, "serialNo": 402, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:19:46.301679 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 21, "time": "2026-04-25T11:18:30+08:00", "doorNo": 1, "serialNo": 406, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:19:55.633914 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 76, "time": "2026-04-25T11:18:53+08:00", "cardType": 1, "cardReaderNo": 1, "doorNo": 1, "serialNo": 408, "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.38, "width": 0.214, "x": 0.316, "y": 0.173}}}}
+------------------------------------------
+
+--- 2026-04-25 03:19:58.773651 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:19:04+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 409, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.003, "y": 0.304}}}}
+------------------------------------------
+
+--- 2026-04-25 03:20:08.065082 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:19:07+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 410, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.138, "x": 0.007, "y": 0.303}}}}
+------------------------------------------
+
+--- 2026-04-25 03:20:17.477910 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-25T11:19:08+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 411, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.011, "y": 0.318}}}}
+------------------------------------------
+
+--- 2026-04-25 03:20:20.782286 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:19:20+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 414, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.216, "width": 0.121, "x": 0.014, "y": 0.333}}}}
+------------------------------------------
+
+--- 2026-04-25 03:20:24.019131 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:19:27+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 416, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.006, "y": 0.326}}}}
+------------------------------------------
+
+--- 2026-04-25 03:20:27.099464 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:19:30+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 417, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.216, "width": 0.121, "x": 0.025, "y": 0.328}}}}
+------------------------------------------
+
+--- 2026-04-25 03:20:30.302021 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-25T11:19:31+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 418, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.216, "width": 0.121, "x": 0.025, "y": 0.333}}}}
+------------------------------------------
+
+--- 2026-04-25 03:20:33.405694 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:19:37+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 421, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.006, "y": 0.332}}}}
+------------------------------------------
+
+--- 2026-04-25 03:20:36.519349 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:19:40+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 422, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.01, "y": 0.329}}}}
+------------------------------------------
+
+--- 2026-04-25 03:20:55.012993 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:19:47+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 423, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.416, "y": 0.23}}}}
+------------------------------------------
+
+--- 2026-04-25 03:21:07.406180 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:19:51+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 424, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.402, "y": 0.208}}}}
+------------------------------------------
+
+--- 2026-04-25 03:21:10.523683 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:20:02+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 427, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.38, "y": 0.236}}}}
+------------------------------------------
+
+--- 2026-04-25 03:21:16.747809 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:20:05+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 428, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.393, "y": 0.251}}}}
+------------------------------------------
+
+--- 2026-04-25 03:21:22.902177 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:20:08+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 429, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.39, "y": 0.257}}}}
+------------------------------------------
+
+--- 2026-04-25 03:21:26.008849 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:20:12+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 430, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.378, "y": 0.238}}}}
+------------------------------------------
+
+--- 2026-04-25 03:21:29.131305 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:20:16+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 431, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.384, "y": 0.244}}}}
+------------------------------------------
+
+--- 2026-04-25 03:21:32.226808 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 21, "time": "2026-04-25T11:20:34+08:00", "doorNo": 1, "serialNo": 435, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:21:38.385552 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-25T11:20:39+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 436, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.379, "y": 0.249}}}}
+------------------------------------------
+
+--- 2026-04-25 03:21:41.470179 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:20:42+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 437, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.37, "y": 0.244}}}}
+------------------------------------------
+
+--- 2026-04-25 03:21:50.750205 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T11:20:44+08:00", "doorNo": 1, "serialNo": 438, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:21:53.833385 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:20:46+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 439, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.377, "y": 0.251}}}}
+------------------------------------------
+
+--- 2026-04-25 03:21:56.940138 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:20:49+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 440, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.379, "y": 0.25}}}}
+------------------------------------------
+
+--- 2026-04-25 03:22:00.019160 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:20:53+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 441, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.377, "y": 0.251}}}}
+------------------------------------------
+
+--- 2026-04-25 03:22:03.130771 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:20:56+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 442, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.373, "y": 0.242}}}}
+------------------------------------------
+
+--- 2026-04-25 03:22:06.272532 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:21:00+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 443, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.377, "y": 0.245}}}}
+------------------------------------------
+
+--- 2026-04-25 03:22:09.350583 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:21:03+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 444, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.129, "x": 0.384, "y": 0.247}}}}
+------------------------------------------
+
+--- 2026-04-25 03:22:15.548810 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 76, "time": "2026-04-25T11:21:24+08:00", "cardType": 1, "cardReaderNo": 1, "doorNo": 1, "serialNo": 445, "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.399, "y": 0.293}}}}
+------------------------------------------
+
+--- 2026-04-25 03:22:18.651158 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:21:28+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 446, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.383, "y": 0.269}}}}
+------------------------------------------
+
+--- 2026-04-25 03:22:21.769907 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:22:08+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 447, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.362, "y": 0.285}}}}
+------------------------------------------
+
+--- 2026-04-25 03:22:24.890812 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:22:11+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 448, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.345, "y": 0.269}}}}
+------------------------------------------
+
+--- 2026-04-25 03:22:37.224517 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:22:18+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 450, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.346, "y": 0.271}}}}
+------------------------------------------
+
+--- 2026-04-25 03:22:40.336893 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:22:22+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 451, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.353, "y": 0.282}}}}
+------------------------------------------
+
+--- 2026-04-25 03:22:43.424568 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:22:25+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 452, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.346, "y": 0.269}}}}
+------------------------------------------
+
+--- 2026-04-25 03:22:46.547217 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 21, "time": "2026-04-25T11:22:29+08:00", "doorNo": 1, "serialNo": 454, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:22:52.732201 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T11:22:34+08:00", "doorNo": 1, "serialNo": 456, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:23:05.052345 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:22:37+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 459, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.371, "y": 0.242}}}}
+------------------------------------------
+
+--- 2026-04-25 03:23:26.591269 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T11:22:39+08:00", "doorNo": 1, "serialNo": 460, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:23:29.695455 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:22:44+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 461, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.37, "y": 0.251}}}}
+------------------------------------------
+
+--- 2026-04-25 03:24:10.021339 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:22:56+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 462, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.361, "y": 0.253}}}}
+------------------------------------------
+
+--- 2026-04-25 03:24:13.131423 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:23:14+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 463, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.372, "y": 0.25}}}}
+------------------------------------------
+
+--- 2026-04-25 03:24:16.262023 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:23:23+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 464, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.362, "y": 0.266}}}}
+------------------------------------------
+
+--- 2026-04-25 03:24:19.368201 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 21, "time": "2026-04-25T11:23:24+08:00", "doorNo": 1, "serialNo": 466, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:24:28.631684 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T11:23:29+08:00", "doorNo": 1, "serialNo": 467, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:24:31.726092 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-25T11:23:34+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 469, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.23, "width": 0.129, "x": 0.361, "y": 0.233}}}}
+------------------------------------------
+
+--- 2026-04-25 03:24:37.859939 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T11:23:40+08:00", "doorNo": 1, "serialNo": 473, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:24:40.945478 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 21, "time": "2026-04-25T11:23:43+08:00", "doorNo": 1, "serialNo": 476, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:24:59.370619 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T11:23:48+08:00", "doorNo": 1, "serialNo": 477, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:25:26.969260 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-25T11:23:56+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 481, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.324, "y": 0.207}}}}
+------------------------------------------
+
+--- 2026-04-25 03:25:30.065836 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T11:24:01+08:00", "doorNo": 1, "serialNo": 482, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:25:33.141251 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 21, "time": "2026-04-25T11:24:07+08:00", "doorNo": 1, "serialNo": 484, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:25:36.222559 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 21, "time": "2026-04-25T11:24:26+08:00", "doorNo": 1, "serialNo": 487, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:25:42.362105 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T11:24:31+08:00", "doorNo": 1, "serialNo": 488, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:29:02.916693 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 3, "minor": 1024, "time": "2026-04-25T11:29:20+08:00", "remoteHostAddr": "192.168.1.10", "doorNo": 1, "serialNo": 489, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:29:09.039396 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T11:29:25+08:00", "doorNo": 1, "serialNo": 491, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:29:51.780180 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 3, "minor": 1024, "time": "2026-04-25T11:30:07+08:00", "remoteHostAddr": "192.168.1.10", "doorNo": 1, "serialNo": 492, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:29:54.857243 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T11:30:12+08:00", "doorNo": 1, "serialNo": 494, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:31:08.134437 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 3, "minor": 1024, "time": "2026-04-25T11:31:26+08:00", "remoteHostAddr": "192.168.1.10", "doorNo": 1, "serialNo": 495, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:31:14.278811 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T11:31:31+08:00", "doorNo": 1, "serialNo": 497, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:31:26.540186 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-25T11:31:42+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 498, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.418, "y": 0.263}}}}
+------------------------------------------
+
+--- 2026-04-25 03:31:29.610737 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T11:31:47+08:00", "doorNo": 1, "serialNo": 500, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:36:12.529810 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 3, "minor": 1024, "time": "2026-04-25T11:36:28+08:00", "remoteHostAddr": "192.168.1.10", "doorNo": 1, "serialNo": 503, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:36:15.607074 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T11:36:33+08:00", "doorNo": 1, "serialNo": 505, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:39:36.607131 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 3, "minor": 1024, "time": "2026-04-25T11:39:54+08:00", "remoteHostAddr": "192.168.1.10", "doorNo": 1, "serialNo": 506, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:39:42.717977 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T11:39:59+08:00", "doorNo": 1, "serialNo": 508, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:43:46.231722 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 3, "minor": 1024, "time": "2026-04-25T11:44:03+08:00", "remoteHostAddr": "192.168.1.10", "doorNo": 1, "serialNo": 509, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:43:52.363118 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T11:44:08+08:00", "doorNo": 1, "serialNo": 511, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:43:58.545804 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 3, "minor": 1024, "time": "2026-04-25T11:44:16+08:00", "remoteHostAddr": "192.168.1.10", "doorNo": 1, "serialNo": 512, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:44:04.705999 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T11:44:21+08:00", "doorNo": 1, "serialNo": 514, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:52:43.579322 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-25T11:53:00+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 515, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.201, "y": 0.064}}}}
+------------------------------------------
+
+--- 2026-04-25 03:52:49.710844 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-25T11:53:05+08:00", "doorNo": 1, "serialNo": 517, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 03:53:50.855030 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 3, "minor": 112, "time": "2026-04-25T11:54:09+08:00", "remoteHostAddr": "192.168.1.10", "serialNo": 518, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 23:53:55.266984 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-26T07:53:03+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 608, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.026, "y": 0.063}}}}
+------------------------------------------
+
+--- 2026-04-25 23:54:13.768134 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-26T07:54:32+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 609, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.115, "y": 0.014}}}}
+------------------------------------------
+
+--- 2026-04-25 23:56:44.348045 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 3, "minor": 1024, "time": "2026-04-26T07:57:01+08:00", "remoteHostAddr": "192.168.1.10", "doorNo": 1, "serialNo": 610, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 23:56:50.451240 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T07:57:06+08:00", "doorNo": 1, "serialNo": 612, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-25 23:58:35.939294 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-26T07:58:51+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 613, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.286, "width": 0.166, "x": 0.049, "y": 0.009}}}}
+------------------------------------------
+
+--- 2026-04-25 23:58:42.175077 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-26T07:59:00+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 614, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.315, "width": 0.177, "x": 0.053, "y": 0.018}}}}
+------------------------------------------
+
+--- 2026-04-25 23:58:54.455480 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-26T07:59:10+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 615, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.315, "width": 0.177, "x": 0.063, "y": 0.015}}}}
+------------------------------------------
+
+--- 2026-04-25 23:58:57.533818 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-26T07:59:13+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 616, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.315, "width": 0.177, "x": 0.053, "y": 0.012}}}}
+------------------------------------------
+
+--- 2026-04-25 23:59:19.741176 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 104, "time": "2026-04-26T07:59:36+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 617, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.054, "y": 0.018}}}}
+------------------------------------------
+
+--- 2026-04-26 00:06:18.138958 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 3, "minor": 126, "time": "2026-04-26T08:06:35+08:00", "serialNo": 618, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 00:07:12.278073 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T08:07:20+08:00", "doorNo": 1, "serialNo": 620, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 00:07:15.374975 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T08:07:32+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "1", "serialNo": 621, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.434, "y": 0.026}}}}
+------------------------------------------
+
+--- 2026-04-26 00:07:21.526635 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 3, "minor": 112, "time": "2026-04-26T08:07:38+08:00", "remoteHostAddr": "192.168.1.10", "serialNo": 624, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 00:08:20.042223 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 3, "minor": 1031, "time": "2026-04-26T08:08:37+08:00", "remoteHostAddr": "192.168.1.10", "serialNo": 625, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 01:33:49.536612 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T09:34:05+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 58, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.315, "width": 0.177, "x": 0.082, "y": 0.233}}}}
+------------------------------------------
+
+--- 2026-04-26 01:33:50.327828 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T09:34:05+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 58, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.315, "width": 0.177, "x": 0.082, "y": 0.233}}}}
+------------------------------------------
+
+--- 2026-04-26 01:33:53.401907 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T09:34:10+08:00", "doorNo": 1, "serialNo": 60, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 01:33:55.699284 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T09:34:10+08:00", "doorNo": 1, "serialNo": 60, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 01:34:07.961094 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T09:34:24+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 61, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.157, "y": 0.277}}}}
+------------------------------------------
+
+--- 2026-04-26 01:34:08.687191 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T09:34:24+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 61, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.157, "y": 0.277}}}}
+------------------------------------------
+
+--- 2026-04-26 01:34:14.150187 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T09:34:29+08:00", "doorNo": 1, "serialNo": 63, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 01:34:15.073019 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T09:34:29+08:00", "doorNo": 1, "serialNo": 63, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 01:35:01.676932 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T09:35:19+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 64, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.138, "y": 0.284}}}}
+------------------------------------------
+
+--- 2026-04-26 01:35:03.321870 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T09:35:19+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 64, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.138, "y": 0.284}}}}
+------------------------------------------
+
+--- 2026-04-26 01:35:06.431414 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T09:35:24+08:00", "doorNo": 1, "serialNo": 66, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 01:35:07.832760 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T09:35:24+08:00", "doorNo": 1, "serialNo": 66, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 01:35:39.517904 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 3, "minor": 1024, "time": "2026-04-26T09:35:56+08:00", "remoteHostAddr": "192.168.1.10", "doorNo": 1, "serialNo": 67, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 01:35:40.655759 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 3, "minor": 1024, "time": "2026-04-26T09:35:56+08:00", "remoteHostAddr": "192.168.1.10", "doorNo": 1, "serialNo": 67, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 01:35:43.770269 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T09:36:01+08:00", "doorNo": 1, "serialNo": 69, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 01:35:45.749937 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T09:36:01+08:00", "doorNo": 1, "serialNo": 69, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 01:38:54.387292 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T09:39:11+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 70, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.181, "y": 0.276}}}}
+------------------------------------------
+
+--- 2026-04-26 01:38:55.294490 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T09:39:11+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 70, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.181, "y": 0.276}}}}
+------------------------------------------
+
+--- 2026-04-26 01:39:00.538913 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T09:39:16+08:00", "doorNo": 1, "serialNo": 72, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 01:39:01.463104 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T09:39:16+08:00", "doorNo": 1, "serialNo": 72, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 01:44:25.616989 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T09:44:41+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 73, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.123, "width": 0.069, "x": 0.458, "y": 0.322}}}}
+------------------------------------------
+
+--- 2026-04-26 01:44:25.857835 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T09:44:41+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 73, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.123, "width": 0.069, "x": 0.458, "y": 0.322}}}}
+------------------------------------------
+
+--- 2026-04-26 01:44:28.729456 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T09:44:46+08:00", "doorNo": 1, "serialNo": 75, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 01:44:28.957587 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T09:44:46+08:00", "doorNo": 1, "serialNo": 75, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 01:44:37.923655 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T09:44:54+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 76, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.269, "y": 0.296}}}}
+------------------------------------------
+
+--- 2026-04-26 01:44:38.241731 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T09:44:54+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 76, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.269, "y": 0.296}}}}
+------------------------------------------
+
+--- 2026-04-26 01:44:41.110311 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T09:44:59+08:00", "doorNo": 1, "serialNo": 78, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 01:44:41.602641 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T09:44:59+08:00", "doorNo": 1, "serialNo": 78, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 01:47:03.992721 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T09:47:20+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 79, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.265, "y": 0.322}}}}
+------------------------------------------
+
+--- 2026-04-26 01:47:04.108115 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T09:47:20+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 79, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.265, "y": 0.322}}}}
+------------------------------------------
+
+--- 2026-04-26 01:47:07.185343 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T09:47:25+08:00", "doorNo": 1, "serialNo": 81, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 01:47:10.154349 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T09:47:25+08:00", "doorNo": 1, "serialNo": 81, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 01:47:13.263439 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T09:47:31+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 82, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.166, "y": 0.326}}}}
+------------------------------------------
+
+--- 2026-04-26 01:47:13.319169 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T09:47:31+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 82, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.245, "width": 0.138, "x": 0.166, "y": 0.326}}}}
+------------------------------------------
+
+--- 2026-04-26 01:47:16.418177 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T09:47:34+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 84, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.404, "width": 0.227, "x": 0.241, "y": 0.182}}}}
+------------------------------------------
+
+--- 2026-04-26 01:47:16.448962 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T09:47:34+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 84, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.404, "width": 0.227, "x": 0.241, "y": 0.182}}}}
+------------------------------------------
+
+--- 2026-04-26 01:47:19.529266 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T09:47:37+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 85, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.357, "width": 0.201, "x": 0.29, "y": 0.278}}}}
+------------------------------------------
+
+--- 2026-04-26 01:47:19.551808 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T09:47:37+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 85, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.357, "width": 0.201, "x": 0.29, "y": 0.278}}}}
+------------------------------------------
+
+--- 2026-04-26 01:47:25.665288 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T09:47:42+08:00", "doorNo": 1, "serialNo": 86, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 01:47:25.756814 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T09:47:42+08:00", "doorNo": 1, "serialNo": 86, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 01:58:06.410024 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T09:58:23+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 87, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.176, "y": 0.208}}}}
+------------------------------------------
+
+--- 2026-04-26 01:58:07.302707 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T09:58:23+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 87, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.176, "y": 0.208}}}}
+------------------------------------------
+
+--- 2026-04-26 01:58:10.369165 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T09:58:28+08:00", "doorNo": 1, "serialNo": 89, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 01:58:12.540918 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T09:58:28+08:00", "doorNo": 1, "serialNo": 89, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 02:01:58.761179 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:02:16+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 90, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.202, "y": 0.239}}}}
+------------------------------------------
+
+--- 2026-04-26 02:02:00.140371 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:02:16+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 90, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.202, "y": 0.239}}}}
+------------------------------------------
+
+--- 2026-04-26 02:02:01.461175 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:02:16+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 90, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.202, "y": 0.239}}}}
+------------------------------------------
+
+--- 2026-04-26 02:02:04.545227 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T10:02:21+08:00", "doorNo": 1, "serialNo": 92, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 02:02:04.933236 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T10:02:21+08:00", "doorNo": 1, "serialNo": 92, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 02:02:06.259511 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T10:02:21+08:00", "doorNo": 1, "serialNo": 92, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 02:04:12.448309 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:04:29+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 93, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.206, "y": 0.245}}}}
+------------------------------------------
+
+--- 2026-04-26 02:04:14.123969 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:04:29+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 93, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.206, "y": 0.245}}}}
+------------------------------------------
+
+--- 2026-04-26 02:04:14.613636 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:04:29+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 93, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.206, "y": 0.245}}}}
+------------------------------------------
+
+--- 2026-04-26 02:04:17.255709 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T10:04:34+08:00", "doorNo": 1, "serialNo": 95, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 02:04:17.752863 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T10:04:34+08:00", "doorNo": 1, "serialNo": 95, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 02:04:18.643099 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T10:04:34+08:00", "doorNo": 1, "serialNo": 95, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 02:09:42.401547 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:09:59+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 96, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.285, "y": 0.251}}}}
+------------------------------------------
+
+--- 2026-04-26 02:09:42.870819 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:09:59+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 96, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.285, "y": 0.251}}}}
+------------------------------------------
+
+--- 2026-04-26 02:09:43.713398 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:09:59+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 96, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.285, "y": 0.251}}}}
+------------------------------------------
+
+--- 2026-04-26 02:09:46.788505 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T10:10:04+08:00", "doorNo": 1, "serialNo": 98, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 02:09:48.547216 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T10:10:04+08:00", "doorNo": 1, "serialNo": 98, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 02:09:49.104521 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T10:10:04+08:00", "doorNo": 1, "serialNo": 98, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 02:10:46.555571 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:11:04+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 99, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.335, "width": 0.188, "x": 0.213, "y": 0.287}}}}
+------------------------------------------
+
+--- 2026-04-26 02:10:47.375040 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:11:04+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 99, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.335, "width": 0.188, "x": 0.213, "y": 0.287}}}}
+------------------------------------------
+
+--- 2026-04-26 02:10:48.072207 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:11:04+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 99, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.335, "width": 0.188, "x": 0.213, "y": 0.287}}}}
+------------------------------------------
+
+--- 2026-04-26 02:10:50.552920 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 76, "time": "2026-04-26T10:11:08+08:00", "cardType": 1, "cardReaderNo": 1, "doorNo": 1, "serialNo": 101, "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.223, "y": 0.302}}}}
+------------------------------------------
+
+--- 2026-04-26 02:10:50.672543 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 76, "time": "2026-04-26T10:11:08+08:00", "cardType": 1, "cardReaderNo": 1, "doorNo": 1, "serialNo": 101, "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.223, "y": 0.302}}}}
+------------------------------------------
+
+--- 2026-04-26 02:10:51.178172 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 76, "time": "2026-04-26T10:11:08+08:00", "cardType": 1, "cardReaderNo": 1, "doorNo": 1, "serialNo": 101, "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.223, "y": 0.302}}}}
+------------------------------------------
+
+--- 2026-04-26 02:10:53.733095 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:11:11+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 105, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.243, "y": 0.255}}}}
+------------------------------------------
+
+--- 2026-04-26 02:10:53.855295 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:11:11+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 105, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.243, "y": 0.255}}}}
+------------------------------------------
+
+--- 2026-04-26 02:10:54.513848 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:11:11+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 105, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.243, "y": 0.255}}}}
+------------------------------------------
+
+--- 2026-04-26 02:11:00.044827 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T10:11:16+08:00", "doorNo": 1, "serialNo": 106, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 02:11:00.711059 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T10:11:16+08:00", "doorNo": 1, "serialNo": 106, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 02:11:00.907988 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T10:11:16+08:00", "doorNo": 1, "serialNo": 106, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 02:14:33.762014 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:14:50+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 107, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.315, "width": 0.177, "x": 0.062, "y": 0.2}}}, "capture_path": "/uploads/live_captures/access_5_22-14-33.jpg"}
+------------------------------------------
+
+--- 2026-04-26 02:14:40.065919 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T10:14:55+08:00", "doorNo": 1, "serialNo": 109, "currentVerifyMode": "invalid", "mask": "unknown"}}, "capture_path": "/uploads/live_captures/access_Desconocido_22-14-39.jpg"}
+------------------------------------------
+
+--- 2026-04-26 02:16:33.482865 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:16:49+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 110, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.156, "x": 0.112, "y": 0.218}}}, "capture_path": "/uploads/live_captures/access_5_22-16-33.jpg"}
+------------------------------------------
+
+--- 2026-04-26 02:16:36.705458 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T10:16:54+08:00", "doorNo": 1, "serialNo": 112, "currentVerifyMode": "invalid", "mask": "unknown"}}, "capture_path": "/uploads/live_captures/access_Desconocido_22-16-36.jpg"}
+------------------------------------------
+
+--- 2026-04-26 02:18:08.466739 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:18:25+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 113, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.335, "width": 0.188, "x": 0.143, "y": 0.22}}}, "capture_path": "/uploads/live_captures/access_5_22-18-08.jpg"}
+------------------------------------------
+
+--- 2026-04-26 02:18:14.845418 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T10:18:30+08:00", "doorNo": 1, "serialNo": 115, "currentVerifyMode": "invalid", "mask": "unknown"}}, "capture_path": "/uploads/live_captures/access_Desconocido_22-18-14.jpg"}
+------------------------------------------
+
+--- 2026-04-26 02:19:50.345708 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:20:05+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 116, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.203, "y": 0.253}}}, "capture_path": "/uploads/live_captures/access_5_22-19-49.jpg"}
+------------------------------------------
+
+--- 2026-04-26 02:19:53.568902 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T10:20:10+08:00", "doorNo": 1, "serialNo": 118, "currentVerifyMode": "invalid", "mask": "unknown"}}, "capture_path": "/uploads/live_captures/access_Desconocido_22-19-53.jpg"}
+------------------------------------------
+
+--- 2026-04-26 02:20:12.211525 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:20:27+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 119, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.229, "y": 0.262}}}, "capture_path": "/uploads/live_captures/access_5_22-20-12.jpg"}
+------------------------------------------
+
+--- 2026-04-26 02:20:15.537017 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T10:20:32+08:00", "doorNo": 1, "serialNo": 121, "currentVerifyMode": "invalid", "mask": "unknown"}}, "capture_path": "/uploads/live_captures/access_Desconocido_22-20-15.jpg"}
+------------------------------------------
+
+--- 2026-04-26 02:21:38.609909 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:21:53+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 122, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.097, "y": 0.246}}}, "capture_path": "/uploads/live_captures/access_5_22-21-38.jpg"}
+------------------------------------------
+
+--- 2026-04-26 02:21:42.160855 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T10:21:58+08:00", "doorNo": 1, "serialNo": 124, "currentVerifyMode": "invalid", "mask": "unknown"}}, "capture_path": "/uploads/live_captures/access_Desconocido_22-21-41.jpg"}
+------------------------------------------
+
+--- 2026-04-26 02:27:17.849893 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:27:34+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 125, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.261, "width": 0.147, "x": 0.275, "y": 0.319}}}}
+------------------------------------------
+
+--- 2026-04-26 02:27:20.909218 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T10:27:39+08:00", "doorNo": 1, "serialNo": 127, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 02:27:48.469731 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:28:06+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 128, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.266, "y": 0.266}}}}
+------------------------------------------
+
+--- 2026-04-26 02:27:54.579075 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T10:28:11+08:00", "doorNo": 1, "serialNo": 130, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 02:29:11.434318 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 3, "minor": 1028, "time": "2026-04-26T10:29:07+08:00", "remoteHostAddr": "192.168.1.10", "serialNo": 131, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 02:32:37.764665 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:32:35+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 132, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.296, "width": 0.166, "x": 0.214, "y": 0.32}}}}
+------------------------------------------
+
+--- 2026-04-26 02:32:44.072274 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T10:32:40+08:00", "doorNo": 1, "serialNo": 134, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 02:33:03.967822 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T10:32:40+08:00", "doorNo": 1, "serialNo": 134, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 02:34:20.747268 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:34:17+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 135, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.315, "width": 0.177, "x": 0.169, "y": 0.28}}}}
+------------------------------------------
+
+--- 2026-04-26 02:34:23.835659 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T10:34:22+08:00", "doorNo": 1, "serialNo": 137, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 02:36:34.344411 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 75, "time": "2026-04-26T10:36:30+08:00", "cardType": 1, "name": "Juan Carlos Gonzalez", "cardReaderNo": 1, "doorNo": 1, "employeeNoString": "5", "serialNo": 138, "userType": "normal", "currentVerifyMode": "faceOrPw", "mask": "no", "FaceRect": {"height": 0.278, "width": 0.156, "x": 0.225, "y": 0.324}}}}
+------------------------------------------
+
+--- 2026-04-26 02:36:37.468391 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T10:36:35+08:00", "doorNo": 1, "serialNo": 140, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 02:55:30.100194 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 3, "minor": 1024, "time": "2026-04-26T10:55:26+08:00", "remoteHostAddr": "192.168.1.10", "doorNo": 1, "serialNo": 141, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------
+
+--- 2026-04-26 02:55:36.245977 from 127.0.0.1 ---
+{"EventNotificationAlert": {"AccessControllerEvent": {"major": 5, "minor": 22, "time": "2026-04-26T10:55:31+08:00", "doorNo": 1, "serialNo": 143, "currentVerifyMode": "invalid", "mask": "unknown"}}}
+------------------------------------------

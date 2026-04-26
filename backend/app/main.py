@@ -6,7 +6,7 @@ import os
 from .core.config import settings
 from .core.database import Base, engine
 from .models import member, access, pos  # importar para crear tablas
-from .api import members, access as access_router, pos as pos_router
+from .api import members, access as access_router, pos as pos_router, reports as reports_router
 
 # Crear tablas
 Base.metadata.create_all(bind=engine)
@@ -36,6 +36,7 @@ app.mount("/uploads", StaticFiles(directory="./uploads"), name="uploads")
 app.include_router(members.router, prefix="/api")
 app.include_router(access_router.router, prefix="/api")
 app.include_router(pos_router.router, prefix="/api")
+app.include_router(reports_router.router, prefix="/api")
 
 
 @app.get("/api/health")

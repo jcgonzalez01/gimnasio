@@ -9,6 +9,7 @@ import Products from './pages/Products'
 import Sales from './pages/Sales'
 import Devices from './pages/Devices'
 import Plans from './pages/Plans'
+import Reports from './pages/Reports'
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Route path="sales" element={<Sales />} />
         <Route path="devices" element={<Devices />} />
         <Route path="plans" element={<Plans />} />
+        <Route path="reports" element={<Reports />} />
       </Route>
     </Routes>
   )

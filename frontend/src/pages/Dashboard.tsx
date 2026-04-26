@@ -35,16 +35,16 @@ function StatCard({ title, value, subtitle, icon, color, alert }: StatCardProps)
 
 export default function Dashboard() {
   const [stats, setStats] = useState<DashboardStats | null>(null)
-  const [recentLogs, setRecentLogs] = useState<AccessLog[]>([])
+  const [recentFaces, setRecentFaces] = useState<any[]>([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     Promise.all([
       posApi.getDashboard(),
-      accessApi.getLogs({ limit: 10 }),
-    ]).then(([statsRes, logsRes]) => {
+      accessApi.getRecentFaces()
+    ]).then(([statsRes, facesRes]) => {
       setStats(statsRes.data)
-      setRecentLogs(logsRes.data)
+      setRecentFaces(facesRes.data)
     }).finally(() => setLoading(false))
   }, [])
 
@@ -132,42 +132,35 @@ export default function Dashboard() {
         </>
       )}
 
-      {/* Últimos accesos */}
+      {/* Caras Recientes - ÚLTIMA HORA */}
       <div className="card">
         <h2 className="font-semibold text-gray-800 mb-4 flex items-center gap-2">
-          <Wifi size={16} className="text-blue-500" />
-          Últimos Accesos
+          <Users size={16} className="text-green-500" />
+          Recién Llegados (Última hora)
         </h2>
-        {recentLogs.length === 0 ? (
-          <p className="text-gray-400 text-sm text-center py-8">Sin registros de acceso</p>
+        {recentFaces.length === 0 ? (
+          <p className="text-gray-400 text-sm text-center py-8">No hay accesos con foto en la última hora</p>
         ) : (
-          <div className="space-y-2">
-            {recentLogs.map(log => (
-              <div key={log.id}
-                className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors">
-                <div className={`w-2 h-2 rounded-full shrink-0 ${
-                  log.result === 'granted' ? 'bg-green-500' : 'bg-red-500'
-                }`} />
-                <div className="flex-1 min-w-0">
-                  <span className="font-medium text-sm">
-                    {log.member_name || 'Desconocido'}
-                  </span>
-                  {log.device_name && (
-                    <span className="text-gray-400 text-xs ml-2">· {log.device_name}</span>
-                  )}
+          <div className="flex flex-wrap gap-4">
+            {recentFaces.map(face => (
+              <div key={face.id} className="flex flex-col items-center gap-1 group">
+                <div className="relative">
+                  <img 
+                    src={face.photo_path ? `http://localhost:8000${face.photo_path}` : 'https://via.placeholder.com/150'} 
+                    alt={face.name}
+                    className="w-16 h-16 rounded-full object-cover border-2 border-green-400 shadow-sm group-hover:scale-105 transition-transform"
+                    onError={(e) => { (e.target as HTMLImageElement).src = 'https://via.placeholder.com/150?text=Error'; }}
+                  />
+                  <div className="absolute -bottom-1 -right-1 bg-white rounded-full p-0.5 shadow">
+                    <div className="w-3 h-3 bg-green-500 rounded-full border border-white" />
+                  </div>
                 </div>
-                <div className="text-right shrink-0">
-                  <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${
-                    log.result === 'granted'
-                      ? 'bg-green-100 text-green-700'
-                      : 'bg-red-100 text-red-700'
-                  }`}>
-                    {log.direction === 'in' ? '↑ Entrada' : '↓ Salida'}
-                  </span>
-                  <p className="text-xs text-gray-400 mt-0.5">
-                    {format(new Date(log.timestamp), 'HH:mm:ss')}
-                  </p>
-                </div>
+                <span className="text-[10px] font-bold text-gray-700 max-w-[70px] truncate">
+                  {face.name.split(' ')[0]}
+                </span>
+                <span className="text-[9px] text-gray-400">
+                  {format(new Date(face.timestamp), 'HH:mm')}
+                </span>
               </div>
             ))}
           </div>

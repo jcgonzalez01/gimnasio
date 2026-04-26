@@ -6,7 +6,7 @@ class Settings(BaseSettings):
     APP_NAME: str = "GymSystem Pro"
     DEBUG: bool = True
     # Soporta SQLite (local/Docker) y PostgreSQL (producción avanzada)
-    DATABASE_URL: str = "sqlite:///./gimnasio.db"
+    DATABASE_URL: str = "sqlite:///backend/gimnasio.db"
     SECRET_KEY: str = "supersecret-gym-key-change-in-production"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 60 * 24  # 24 horas
 

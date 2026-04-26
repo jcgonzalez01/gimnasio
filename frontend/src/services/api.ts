@@ -5,7 +5,10 @@ import type {
   Product, ProductCategory, Sale, DashboardStats
 } from '../types'
 
-const api = axios.create({ baseURL: '/api' })
+// Configuración de Axios simple y directa
+const api = axios.create({ 
+  baseURL: '/api'
+})
 
 // ── Miembros ──────────────────────────────────────────────────────────────────
 
@@ -71,7 +74,7 @@ export const devicesApi = {
     }),
   pullEvents: (id: number, hours = 24) =>
     api.post(`/access/devices/${id}/pull-events`, null, { params: { hours } }),
-  }
+}
 
 
 // ── Acceso ────────────────────────────────────────────────────────────────────
@@ -81,6 +84,7 @@ export const accessApi = {
     member_id?: number; device_id?: number;
     start_date?: string; end_date?: string; limit?: number
   }) => api.get<AccessLog[]>('/access/logs', { params }),
+  getRecentFaces: () => api.get<any[]>('/access/recent-faces'),
   createLog: (data: Partial<AccessLog>) => api.post<AccessLog>('/access/logs', data),
   registerAndEnroll: (memberId: number, opts?: {
     beginDate?: string; endDate?: string; deviceIds?: string
@@ -137,6 +141,25 @@ export const posApi = {
     api.get<Sale[]>('/pos/sales', { params }),
   getSale: (id: number) => api.get<Sale>(`/pos/sales/${id}`),
   getDashboard: () => api.get<DashboardStats>('/pos/dashboard'),
+}
+
+// ── Reportes ────────────────────────────────────────────────────────────────────
+
+export const reportsApi = {
+  getDashboard: () => api.get('/reports/dashboard'),
+  getDailyStats: (days = 7) => api.get('/reports/daily', { params: { days } }),
+  getAccessReport: (params?: {
+    start_date?: string; end_date?: string; result?: string; member_id?: number; limit?: number
+  }) => api.get('/reports/access', { params }),
+  getSalesReport: (params?: {
+    start_date?: string; end_date?: string; payment_method?: string; member_id?: number; limit?: number
+  }) => api.get('/reports/sales', { params }),
+  getTopMembers: (days = 30, limit = 10) =>
+    api.get('/reports/top-members', { params: { days, limit } }),
+  getTopProducts: (days = 30, limit = 10) =>
+    api.get('/reports/top-products', { params: { days, limit } }),
+  getSummary: (params?: { start_date?: string; end_date?: string }) =>
+    api.get('/reports/summary', { params }),
 }
 
 export default api

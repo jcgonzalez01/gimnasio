@@ -39,6 +39,7 @@ class AccessLog(Base):
     result = Column(String(20), default="granted")  # granted, denied, unknown
     temperature = Column(Float, nullable=True)  # Si el dispositivo tiene termometro
     raw_event = Column(Text, nullable=True)  # JSON raw del evento Hikvision
+    capture_path = Column(String(255), nullable=True)  # Foto capturada en el momento
     notes = Column(String(255), nullable=True)
 
     member = relationship("Member", back_populates="access_logs")
