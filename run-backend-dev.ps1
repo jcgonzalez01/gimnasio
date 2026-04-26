@@ -42,8 +42,8 @@ if (-not (Test-Path $uvicorn)) {
 
 # ── 3. Start FastAPI ──────────────────────────────────────────────────────────
 Write-Host ""
-Write-Host ">>> Iniciando FastAPI en http://localhost:8000" -ForegroundColor Green
-Write-Host ">>> API Docs: http://localhost:8000/api/docs" -ForegroundColor Green
+Write-Host ">>> Iniciando FastAPI en http://localhost:8001" -ForegroundColor Green
+Write-Host ">>> API Docs: http://localhost:8001/api/docs" -ForegroundColor Green
 Write-Host ""
 Set-Location $backDir
-& $pyExe -m uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+& $pyExe -m uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload

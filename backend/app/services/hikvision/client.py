@@ -210,8 +210,7 @@ class HikvisionClient:
         try:
             url = f"{self.base_url}/ISAPI/AccessControl/UserInfo/Delete?format=json"
             payload = {
-                "UserInfoDetail": {
-                    "mode": "byEmployeeNo",
+                "UserInfoDelCond": {
                     "EmployeeNoList": [{"employeeNo": str(employee_no)}]
                 }
             }

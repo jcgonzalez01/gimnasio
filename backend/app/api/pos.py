@@ -1,12 +1,21 @@
 from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi.responses import StreamingResponse
 from sqlalchemy.orm import Session
 from sqlalchemy import desc, func
 from typing import List, Optional
 from datetime import datetime, timedelta
+from io import BytesIO
 
 from ..core.database import get_db
+from ..core.security import require_roles, get_current_user
+from ..models.user import User
 from ..models.pos import Product, ProductCategory, Sale, SaleItem
 from ..models.member import Member
+from fastapi import Request
+from ..services.audit import log_action
+from ..services.deletion import (
+    assess_product, assess_category, assess_sale, to_409_payload
+)
 from ..schemas.pos import (
     ProductCategoryCreate, ProductCategoryOut,
     ProductCreate, ProductUpdate, ProductOut,
@@ -14,8 +23,30 @@ from ..schemas.pos import (
 )
 from ..models.access import AccessLog
 from ..models.member import MemberMembership
+from ..models.audit import AuditLog
 
 router = APIRouter(prefix="/pos", tags=["Punto de Venta"])
+
+
+@router.get("/sales/{sale_id}/receipt")
+def download_receipt(sale_id: int, db: Session = Depends(get_db)):
+    """Descarga el recibo PDF de una venta."""
+    sale = db.query(Sale).filter(Sale.id == sale_id).first()
+    if not sale:
+        raise HTTPException(status_code=404, detail="Venta no encontrada")
+
+    from ..services.receipts import render_sale_receipt
+    member_name = None
+    if sale.member_id:
+        m = db.query(Member).filter(Member.id == sale.member_id).first()
+        if m:
+            member_name = m.full_name
+
+    pdf_bytes = render_sale_receipt(sale, member_name=member_name)
+    headers = {
+        "Content-Disposition": f'inline; filename="recibo_{sale.sale_number}.pdf"',
+    }
+    return StreamingResponse(BytesIO(pdf_bytes), media_type="application/pdf", headers=headers)
 
 
 # ── Categorías ────────────────────────────────────────────────────────────────
@@ -25,13 +56,38 @@ def list_categories(db: Session = Depends(get_db)):
     return db.query(ProductCategory).filter(ProductCategory.is_active == True).all()
 
 
-@router.post("/categories", response_model=ProductCategoryOut, status_code=201)
+@router.post("/categories", response_model=ProductCategoryOut, status_code=201,
+             dependencies=[Depends(require_roles("manager"))])
 def create_category(cat: ProductCategoryCreate, db: Session = Depends(get_db)):
     db_cat = ProductCategory(**cat.model_dump())
     db.add(db_cat)
     db.commit()
     db.refresh(db_cat)
     return db_cat
+
+
+@router.delete("/categories/{category_id}",
+               dependencies=[Depends(require_roles("manager"))])
+def delete_category(category_id: int,
+                    request: Request,
+                    force: bool = False,
+                    user: User = Depends(get_current_user),
+                    db: Session = Depends(get_db)):
+    cat = db.query(ProductCategory).filter(ProductCategory.id == category_id).first()
+    if not cat:
+        raise HTTPException(status_code=404, detail="Categoría no encontrada")
+
+    impact = assess_category(db, cat)
+    if impact["history"] and not force:
+        raise HTTPException(status_code=409,
+                            detail=to_409_payload("La categoría", impact))
+
+    cat.is_active = False
+    db.commit()
+    log_action(db, user, "delete", entity_type="category", entity_id=category_id,
+               summary=f"Desactivó categoría '{cat.name}'" + (" (forzado)" if force else ""),
+               request=request)
+    return {"message": "Categoría desactivada"}
 
 
 # ── Productos ─────────────────────────────────────────────────────────────────
@@ -56,7 +112,8 @@ def list_products(
     return q.all()
 
 
-@router.post("/products", response_model=ProductOut, status_code=201)
+@router.post("/products", response_model=ProductOut, status_code=201,
+             dependencies=[Depends(require_roles("manager"))])
 def create_product(product: ProductCreate, db: Session = Depends(get_db)):
     db_prod = Product(**product.model_dump())
     db.add(db_prod)
@@ -73,7 +130,8 @@ def get_product(product_id: int, db: Session = Depends(get_db)):
     return p
 
 
-@router.put("/products/{product_id}", response_model=ProductOut)
+@router.put("/products/{product_id}", response_model=ProductOut,
+            dependencies=[Depends(require_roles("manager"))])
 def update_product(product_id: int, product: ProductUpdate, db: Session = Depends(get_db)):
     p = db.query(Product).filter(Product.id == product_id).first()
     if not p:
@@ -85,13 +143,26 @@ def update_product(product_id: int, product: ProductUpdate, db: Session = Depend
     return p
 
 
-@router.delete("/products/{product_id}")
-def delete_product(product_id: int, db: Session = Depends(get_db)):
+@router.delete("/products/{product_id}", dependencies=[Depends(require_roles("manager"))])
+def delete_product(product_id: int,
+                   request: Request,
+                   force: bool = False,
+                   user: User = Depends(get_current_user),
+                   db: Session = Depends(get_db)):
     p = db.query(Product).filter(Product.id == product_id).first()
     if not p:
         raise HTTPException(status_code=404, detail="Producto no encontrado")
+
+    impact = assess_product(db, p)
+    if impact["history"] and not force:
+        raise HTTPException(status_code=409,
+                            detail=to_409_payload("El producto", impact))
+
     p.is_active = False
     db.commit()
+    log_action(db, user, "delete", entity_type="product", entity_id=product_id,
+               summary=f"Desactivó producto '{p.name}'" + (" (forzado)" if force else ""),
+               request=request)
     return {"message": "Producto desactivado"}
 
 
@@ -272,10 +343,25 @@ def get_dashboard(db: Session = Depends(get_db)):
     active_members = db.query(func.count(Member.id)).filter(Member.status == "active").scalar()
     expired_members = db.query(func.count(Member.id)).filter(Member.status == "expired").scalar()
 
-    entries_today = db.query(func.count(AccessLog.id)).filter(
+    # Lógica de entradas de hoy con ventana de 4 horas por miembro
+    logs_today = db.query(AccessLog).filter(
         AccessLog.timestamp >= today_start,
-        AccessLog.result == "granted"
-    ).scalar()
+        AccessLog.result == "granted",
+        AccessLog.member_id.isnot(None)
+    ).order_by(AccessLog.member_id, AccessLog.timestamp.asc()).all()
+
+    entries_today = 0
+    last_entries = {}  # {member_id: last_timestamp}
+    for log in logs_today:
+        m_id = log.member_id
+        if m_id not in last_entries:
+            entries_today += 1
+            last_entries[m_id] = log.timestamp
+        else:
+            diff = log.timestamp - last_entries[m_id]
+            if diff.total_seconds() >= 4 * 3600:
+                entries_today += 1
+                last_entries[m_id] = log.timestamp
 
     entries_this_month = db.query(func.count(AccessLog.id)).filter(
         AccessLog.timestamp >= month_start,
@@ -304,6 +390,12 @@ def get_dashboard(db: Session = Depends(get_db)):
         MemberMembership.is_active == True
     ).scalar()
 
+    # Contador de aperturas manuales hoy
+    manual_openings = db.query(func.count(AuditLog.id)).filter(
+        AuditLog.timestamp >= today_start,
+        AuditLog.action == "open_door"
+    ).scalar() or 0
+
     return DashboardStats(
         total_members=total_members,
         active_members=active_members,
@@ -314,4 +406,52 @@ def get_dashboard(db: Session = Depends(get_db)):
         sales_this_month=sales_this_month,
         low_stock_products=low_stock,
         memberships_expiring_soon=expiring_soon,
+        manual_openings=manual_openings,
     )
+
+
+# ── Cancelación de venta ──────────────────────────────────────────────────────
+
+@router.delete("/sales/{sale_id}", dependencies=[Depends(require_roles("manager"))])
+def cancel_sale(sale_id: int,
+                request: Request,
+                force: bool = False,
+                user: User = Depends(get_current_user),
+                db: Session = Depends(get_db)):
+    """Cancela una venta (no la borra). Restaura stock."""
+    sale = db.query(Sale).filter(Sale.id == sale_id).first()
+    if not sale:
+        raise HTTPException(status_code=404, detail="Venta no encontrada")
+
+    impact = assess_sale(db, sale)
+    if impact["blocked"]:
+        raise HTTPException(status_code=409, detail=impact["block_reason"])
+
+    # Si está vinculada a una membresía activa, requiere force
+    if not force and any(mm.sale_id == sale.id and mm.is_active
+                          for mm in db.query(MemberMembership).filter(
+                              MemberMembership.sale_id == sale.id).all()):
+        raise HTTPException(status_code=409, detail={
+            "detail": "Esta venta tiene una membresía vinculada. Cancelar revertirá la membresía.",
+            "requires_force": True,
+            "history": True,
+            "items": [{"label": "Membresía vinculada", "count": 1}],
+        })
+
+    # Restock de productos físicos
+    for item in sale.items:
+        if item.product_id:
+            product = db.query(Product).filter(Product.id == item.product_id).first()
+            if product and not product.is_service:
+                product.stock += item.quantity
+
+    # Desactivar membresías vinculadas
+    for mm in db.query(MemberMembership).filter(MemberMembership.sale_id == sale.id).all():
+        mm.is_active = False
+
+    sale.status = "cancelled"
+    db.commit()
+    log_action(db, user, "cancel_sale", entity_type="sale", entity_id=sale_id,
+               summary=f"Canceló venta {sale.sale_number}" + (" (forzado)" if force else ""),
+               request=request)
+    return {"message": "Venta cancelada", "sale_number": sale.sale_number}

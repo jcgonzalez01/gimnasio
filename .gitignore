@@ -7,7 +7,11 @@ venv/
 *.db
 *.db-shm
 *.db-wal
+*.db-journal
 .python
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
 # Node
 node_modules/
@@ -16,16 +20,41 @@ dist/
 
 # Entornos
 .env
+.env.local
 !.env.production
+!.env.example
 *.env.local
 
 # Uploads (no versionar fotos)
 backend/uploads/
+backend/data/
+
+# Logs
+*.log
+backend/webhook_raw_debug.log
+logs/
+
+# Capturas y debug
+capturas_manuales/
+backend/temp_config.py
+
+# Build artefactos
+backend/.python/
+files.zip
+files1.zip
 
 # OS
 .DS_Store
 Thumbs.db
+desktop.ini
 
 # IDE
 .vscode/
 .idea/
+*.swp
+*.swo
+
+# Tests / coverage
+.coverage
+coverage.xml
+htmlcov/

@@ -118,3 +118,4 @@ class DashboardStats(BaseModel):
     sales_this_month: float
     low_stock_products: int
     memberships_expiring_soon: int  # proximos 7 dias
+    manual_openings: int

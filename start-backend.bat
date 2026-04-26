@@ -15,8 +15,8 @@ echo Instalando dependencias...
 pip install -r requirements.txt -q
 
 echo.
-echo Iniciando servidor en http://localhost:8000
-echo Documentacion API: http://localhost:8000/api/docs
+echo Iniciando servidor en http://localhost:8001
+echo Documentacion API: http://localhost:8001/api/docs
 echo.
-uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
 pause

@@ -195,6 +195,7 @@ export interface DashboardStats {
   sales_this_month: number
   low_stock_products: number
   memberships_expiring_soon: number
+  manual_openings: number
 }
 
 export interface ReportsDashboardStats {
@@ -255,4 +256,38 @@ export interface ReportsSummary {
   period: { start: string; end: string }
   access: { total: number; granted: number; denied: number }
   sales: { total: number; amount: number; average: number }
+}
+
+// ── Auth ────────────────────────────────────────────────────────────────────
+
+export type UserRole = 'admin' | 'manager' | 'cashier' | 'reception'
+
+export interface AuthUser {
+  id: number
+  username: string
+  email?: string
+  full_name?: string
+  role: UserRole
+  is_active: boolean
+  last_login?: string
+  created_at: string
+}
+
+export interface LoginResponse {
+  access_token: string
+  token_type: string
+  user: AuthUser
+}
+
+export interface AuditLogEntry {
+  id: number
+  user_id?: number
+  username?: string
+  action: string
+  entity_type?: string
+  entity_id?: string
+  summary?: string
+  details?: string
+  ip_address?: string
+  timestamp: string
 }

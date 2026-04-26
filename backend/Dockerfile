@@ -21,7 +21,12 @@ RUN mkdir -p /app/data /app/uploads/faces
 ENV DATABASE_URL=sqlite:////app/data/gimnasio.db
 ENV UPLOAD_DIR=/app/uploads
 ENV FACES_DIR=/app/uploads/faces
+ENV ENV=production
+
+# Entrypoint que aplica migraciones y arranca uvicorn
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
 EXPOSE 8000
 
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--workers", "2"]
+CMD ["/entrypoint.sh"]

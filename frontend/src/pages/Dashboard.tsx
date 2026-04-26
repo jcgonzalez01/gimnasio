@@ -4,7 +4,7 @@ import type { DashboardStats, AccessLog } from '../types'
 import { accessApi } from '../services/api'
 import {
   Users, TrendingUp, DollarSign, AlertTriangle,
-  UserCheck, LogIn, Calendar, Wifi
+  UserCheck, LogIn, Calendar, Wifi, KeyRound
 } from 'lucide-react'
 import { format } from 'date-fns'
 import { es } from 'date-fns/locale'
@@ -49,6 +49,10 @@ export default function Dashboard() {
   }, [])
 
   const fmt = (n: number) => new Intl.NumberFormat('es-MX', { style: 'currency', currency: 'MXN' }).format(n)
+
+  const API_URL = window.location.origin.includes(':5173') 
+    ? window.location.origin.replace(':5173', ':8001')
+    : window.location.origin
 
   if (loading) return (
     <div className="p-8 flex items-center justify-center h-full">
@@ -102,10 +106,11 @@ export default function Dashboard() {
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             <StatCard
-              title="Miembros Activos"
-              value={stats.active_members}
-              icon={<UserCheck size={20} className="text-teal-600" />}
-              color="bg-teal-50"
+              title="Aperturas Manuales"
+              value={stats.manual_openings}
+              icon={<KeyRound size={20} className="text-blue-600" />}
+              color="bg-blue-50"
+              subtitle="realizadas hoy"
             />
             <StatCard
               title="Membresías Vencidas"
@@ -146,7 +151,8 @@ export default function Dashboard() {
               <div key={face.id} className="flex flex-col items-center gap-1 group">
                 <div className="relative">
                   <img 
-                    src={face.photo_path ? `http://localhost:8000${face.photo_path}` : 'https://via.placeholder.com/150'} 
+                    src={face.photo_path ? `${API_URL}${face.photo_path}` : 'https://via.placeholder.com/150'}
+ 
                     alt={face.name}
                     className="w-16 h-16 rounded-full object-cover border-2 border-green-400 shadow-sm group-hover:scale-105 transition-transform"
                     onError={(e) => { (e.target as HTMLImageElement).src = 'https://via.placeholder.com/150?text=Error'; }}

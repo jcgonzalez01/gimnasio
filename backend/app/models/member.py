@@ -57,6 +57,15 @@ class Member(Base):
                 return m
         return None
 
+    @property
+    def has_active_membership(self) -> bool:
+        return self.active_membership is not None
+
+    @property
+    def membership_expires(self):
+        am = self.active_membership
+        return am.end_date if am else None
+
 
 class MembershipPlan(Base):
     __tablename__ = "membership_plans"

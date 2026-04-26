@@ -48,7 +48,7 @@ export default function AccessControl() {
     const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws'
     let host = window.location.host
     if (host.includes(':5173')) {
-      host = host.replace(':5173', ':8000')
+      host = host.replace(':5173', ':8001')
     }
     
     const wsUrl = `${protocol}://${host}/api/access/ws`
@@ -85,7 +85,8 @@ export default function AccessControl() {
   const filteredLogs = onlyWithId ? logs.filter(log => log.member_id) : logs
   const lastIdentified = logs.find(log => log.member_id)
   const API_URL = window.location.origin.includes(':5173') 
-    ? window.location.origin.replace(':5173', ':8000') 
+    ? window.location.origin.replace(':5173', ':8001')
+ 
     : window.location.origin
 
   return (

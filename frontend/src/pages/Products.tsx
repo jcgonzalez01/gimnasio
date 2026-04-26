@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 import { posApi } from '../services/api'
 import type { Product, ProductCategory } from '../types'
-import { Plus, Edit2, Package, AlertTriangle } from 'lucide-react'
+import { Plus, Edit2, Package, AlertTriangle, Trash2 } from 'lucide-react'
 import toast from 'react-hot-toast'
+import DeleteConfirmationModal from '../components/DeleteConfirmationModal'
 
 export default function Products() {
   const [products, setProducts] = useState<Product[]>([])
@@ -12,6 +13,18 @@ export default function Products() {
   const [form, setForm] = useState({
     name: '', description: '', price: '', cost: '', stock: '0',
     min_stock: '5', category_id: '', is_service: false, sku: '',
+  })
+
+  // Estado para borrado
+  const [deleteModal, setDeleteModal] = useState<{
+    isOpen: boolean;
+    product: Product | null;
+    impact?: any;
+    loading: boolean;
+  }>({
+    isOpen: false,
+    product: null,
+    loading: false
   })
 
   const load = () => {
@@ -62,6 +75,36 @@ export default function Products() {
     }
   }
 
+  const handleDeleteClick = (product: Product) => {
+    setDeleteModal({
+      isOpen: true,
+      product: product,
+      loading: false
+    })
+  }
+
+  const confirmDelete = async (force: boolean) => {
+    if (!deleteModal.product) return
+    setDeleteModal(prev => ({ ...prev, loading: true }))
+    try {
+      await posApi.deleteProduct(deleteModal.product.id, force)
+      toast.success(`🗑️ Producto eliminado`)
+      setDeleteModal({ isOpen: false, product: null, loading: false })
+      load()
+    } catch (err: any) {
+      if (err.response?.status === 409) {
+        setDeleteModal(prev => ({
+          ...prev,
+          loading: false,
+          impact: err.response.data.requires_force ? err.response.data : { history: true, detail: err.response.data.detail, items: [] }
+        }))
+      } else {
+        toast.error('Error al eliminar')
+        setDeleteModal(prev => ({ ...prev, loading: false }))
+      }
+    }
+  }
+
   return (
     <div className="p-8 space-y-6">
       <div className="flex items-center justify-between">
@@ -83,7 +126,7 @@ export default function Products() {
               <th className="text-left px-4 py-3 text-gray-500 font-medium">Precio</th>
               <th className="text-left px-4 py-3 text-gray-500 font-medium">Stock</th>
               <th className="text-left px-4 py-3 text-gray-500 font-medium">Tipo</th>
-              <th className="px-4 py-3" />
+              <th className="px-4 py-3 text-right text-gray-500 font-medium">Acciones</th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-50">
@@ -127,10 +170,18 @@ export default function Products() {
                   </span>
                 </td>
                 <td className="px-4 py-3">
-                  <button onClick={() => openForm(p)}
-                    className="text-gray-400 hover:text-blue-600 p-1">
-                    <Edit2 size={14} />
-                  </button>
+                  <div className="flex justify-end gap-1">
+                    <button onClick={() => openForm(p)}
+                      className="text-gray-400 hover:text-blue-600 p-1.5 rounded-lg hover:bg-blue-50 transition-colors"
+                      title="Editar">
+                      <Edit2 size={14} />
+                    </button>
+                    <button onClick={() => handleDeleteClick(p)}
+                      className="text-gray-400 hover:text-red-600 p-1.5 rounded-lg hover:bg-red-50 transition-colors"
+                      title="Eliminar">
+                      <Trash2 size={14} />
+                    </button>
+                  </div>
                 </td>
               </tr>
             ))}
@@ -207,6 +258,16 @@ export default function Products() {
           </div>
         </div>
       )}
+
+      <DeleteConfirmationModal
+        isOpen={deleteModal.isOpen}
+        title="Eliminar Producto"
+        message={`¿Estás seguro de que deseas eliminar el producto "${deleteModal.product?.name}"?`}
+        impact={deleteModal.impact}
+        isLoading={deleteModal.loading}
+        onConfirm={confirmDelete}
+        onCancel={() => setDeleteModal({ isOpen: false, product: null, loading: false })}
+      />
     </div>
   )
 }

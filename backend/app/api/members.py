@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException, UploadFile, File, Query
+from fastapi import APIRouter, Depends, HTTPException, UploadFile, File, Query, Request
 from sqlalchemy.orm import Session
 from sqlalchemy import or_
 from sqlalchemy.exc import IntegrityError
@@ -8,6 +8,8 @@ import os, shutil, uuid, logging, threading
 
 from ..core.database import get_db
 from ..core.config import settings
+from ..core.security import require_roles, get_current_user
+from ..models.user import User
 from ..models.member import Member, MembershipPlan, MemberMembership
 from ..models.pos import Sale, SaleItem
 from ..models.access import HikvisionDevice
@@ -18,6 +20,8 @@ from ..schemas.member import (
     AssignMembershipResponse, AccessEnrollResult,
 )
 from ..services.hikvision import HikvisionISAPI, image_file_to_base64
+from ..services.audit import log_action
+from ..services.deletion import assess_member, assess_plan, to_409_payload
 
 logger = logging.getLogger(__name__)
 
@@ -37,7 +41,8 @@ def list_plans(db: Session = Depends(get_db)):
     return db.query(MembershipPlan).filter(MembershipPlan.is_active == True).all()
 
 
-@router.post("/plans", response_model=MembershipPlanOut, status_code=201)
+@router.post("/plans", response_model=MembershipPlanOut, status_code=201,
+             dependencies=[Depends(require_roles("manager"))])
 def create_plan(plan: MembershipPlanCreate, db: Session = Depends(get_db)):
     db_plan = MembershipPlan(**plan.model_dump())
     db.add(db_plan)
@@ -46,7 +51,8 @@ def create_plan(plan: MembershipPlanCreate, db: Session = Depends(get_db)):
     return db_plan
 
 
-@router.put("/plans/{plan_id}", response_model=MembershipPlanOut)
+@router.put("/plans/{plan_id}", response_model=MembershipPlanOut,
+            dependencies=[Depends(require_roles("manager"))])
 def update_plan(plan_id: int, plan: MembershipPlanUpdate, db: Session = Depends(get_db)):
     db_plan = db.query(MembershipPlan).filter(MembershipPlan.id == plan_id).first()
     if not db_plan:
@@ -58,13 +64,26 @@ def update_plan(plan_id: int, plan: MembershipPlanUpdate, db: Session = Depends(
     return db_plan
 
 
-@router.delete("/plans/{plan_id}")
-def delete_plan(plan_id: int, db: Session = Depends(get_db)):
+@router.delete("/plans/{plan_id}", dependencies=[Depends(require_roles("manager"))])
+def delete_plan(plan_id: int,
+                request: Request,
+                force: bool = False,
+                user: User = Depends(get_current_user),
+                db: Session = Depends(get_db)):
     db_plan = db.query(MembershipPlan).filter(MembershipPlan.id == plan_id).first()
     if not db_plan:
         raise HTTPException(status_code=404, detail="Plan no encontrado")
+
+    impact = assess_plan(db, db_plan)
+    if impact["history"] and not force:
+        raise HTTPException(status_code=409,
+                            detail=to_409_payload("El plan", impact))
+
     db_plan.is_active = False
     db.commit()
+    log_action(db, user, "delete", entity_type="plan", entity_id=plan_id,
+               summary=f"Desactivó plan '{db_plan.name}'" + (" (forzado)" if force else ""),
+               request=request)
     return {"message": "Plan desactivado"}
 
 
@@ -241,21 +260,22 @@ def update_member(member_id: int, member: MemberUpdate, db: Session = Depends(ge
     return db_member
 
 
-@router.delete("/{member_id}")
-def delete_member(member_id: int, db: Session = Depends(get_db)):
+@router.delete("/{member_id}", dependencies=[Depends(require_roles("manager"))])
+def delete_member(member_id: int,
+                  request: Request,
+                  force: bool = False,
+                  user: User = Depends(get_current_user),
+                  db: Session = Depends(get_db)):
     m = db.query(Member).filter(Member.id == member_id).first()
     if not m:
         raise HTTPException(status_code=404, detail="Miembro no encontrado")
 
-    # Verificar membresías activas
-    now = datetime.utcnow()
-    active = [mem for mem in m.memberships
-              if mem.is_active and mem.end_date >= now]
-    if active:
-        raise HTTPException(
-            status_code=409,
-            detail="No se puede eliminar: el miembro tiene una membresía activa vigente"
-        )
+    impact = assess_member(db, m)
+    if impact["blocked"]:
+        raise HTTPException(status_code=409, detail=impact["block_reason"])
+    if impact["history"] and not force:
+        raise HTTPException(status_code=409,
+                            detail=to_409_payload("El miembro", impact))
 
     # Eliminar del dispositivo Hikvision (en background, no bloquear si falla)
     member_id_val = m.id
@@ -279,6 +299,8 @@ def delete_member(member_id: int, db: Session = Depends(get_db)):
     # Borrado físico en la base de datos
     db.delete(m)
     db.commit()
+    log_action(db, user, "delete", entity_type="member", entity_id=member_id_val,
+               summary=f"Eliminó miembro '{m.full_name}'", request=request)
     return {"message": "Miembro eliminado"}
 
 
@@ -574,3 +596,35 @@ def update_member_validity(
             all_ok = False
 
     return {"success": all_ok, "results": results}
+
+
+@router.delete("/del-membership/{membership_id}", dependencies=[Depends(require_roles("manager", "admin"))])
+def delete_membership(membership_id: int,
+                      request: Request,
+                      user: User = Depends(get_current_user),
+                      db: Session = Depends(get_db)):
+    """Elimina una membresía y actualiza el estado del miembro si no le quedan membresías activas."""
+    mem = db.query(MemberMembership).filter(MemberMembership.id == membership_id).first()
+    if not mem:
+        raise HTTPException(status_code=404, detail="Membresía no encontrada")
+
+    member_id = mem.member_id
+    member_name = mem.member.full_name if mem.member else f"ID {member_id}"
+    plan_name = mem.plan.name if mem.plan else "Desconocido"
+
+    db.delete(mem)
+    db.commit()
+
+    # Si al miembro no le quedan membresías activas, marcar como expirado
+    m = db.query(Member).filter(Member.id == member_id).first()
+    if m:
+        now = datetime.utcnow()
+        active = any(om.is_active and om.start_date <= now <= om.end_date for om in m.memberships)
+        if not active:
+            m.status = "expired"
+            db.commit()
+
+    log_action(db, user, "delete_membership", entity_type="membership", entity_id=membership_id,
+               summary=f"Eliminó membresía '{plan_name}' de {member_name}", request=request)
+    
+    return {"message": "Membresía eliminada correctamente"}

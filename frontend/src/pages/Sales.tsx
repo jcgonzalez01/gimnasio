@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import { posApi } from '../services/api'
 import type { Sale } from '../types'
 import { format } from 'date-fns'
-import { Receipt } from 'lucide-react'
+import { Receipt, Printer } from 'lucide-react'
+import toast from 'react-hot-toast'
 
 export default function Sales() {
   const [sales, setSales] = useState<Sale[]>([])
@@ -16,6 +17,18 @@ export default function Sales() {
   }, [])
 
   const payLabel = (m: string) => ({ cash: 'Efectivo', card: 'Tarjeta', transfer: 'Transferencia' }[m] || m)
+
+  const downloadReceipt = async (sale: Sale) => {
+    try {
+      const res = await posApi.downloadReceipt(sale.id)
+      const blob = new Blob([res.data], { type: 'application/pdf' })
+      const url = URL.createObjectURL(blob)
+      window.open(url, '_blank')
+      setTimeout(() => URL.revokeObjectURL(url), 60_000)
+    } catch {
+      toast.error('Error generando recibo')
+    }
+  }
 
   return (
     <div className="p-8 space-y-6">
@@ -88,6 +101,12 @@ export default function Sales() {
                 {payLabel(selected.payment_method)} · {format(new Date(selected.created_at), 'dd/MM/yyyy HH:mm')}
               </p>
             </div>
+            <button
+              onClick={() => downloadReceipt(selected)}
+              className="w-full mt-4 flex items-center justify-center gap-2 px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-sm"
+            >
+              <Printer size={14} /> Imprimir / descargar PDF
+            </button>
           </div>
         )}
       </div>

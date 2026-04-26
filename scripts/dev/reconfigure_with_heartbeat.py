@@ -3,7 +3,7 @@ from requests.auth import HTTPDigestAuth
 
 # Configuración destino
 SERVER_IP = "192.168.1.10"
-SERVER_PORT = 8000
+SERVER_PORT = 8001
 PATH = "/api/access/hikvision-webhook"
 
 # Obtener credenciales del dispositivo
@@ -21,6 +21,7 @@ user, pwd, device_ip = row
 url = f"http://{device_ip}/ISAPI/Event/notification/httpHosts"
 full_webhook_url = f"http://{SERVER_IP}:{SERVER_PORT}{PATH}"
 
+# Configuración con HEARTBEAT y EVENTMODE ALL
 xml_body = f"""<?xml version="1.0" encoding="UTF-8"?>
 <HttpHostNotificationList version="2.0" xmlns="http://www.isapi.org/ver20/XMLSchema">
     <HttpHostNotification>
@@ -32,10 +33,14 @@ xml_body = f"""<?xml version="1.0" encoding="UTF-8"?>
         <ipAddress>{SERVER_IP}</ipAddress>
         <portNo>{SERVER_PORT}</portNo>
         <httpAuthenticationMethod>none</httpAuthenticationMethod>
+        <SubscribeEvent>
+            <heartbeat>10</heartbeat>
+            <eventMode>all</eventMode>
+        </SubscribeEvent>
     </HttpHostNotification>
 </HttpHostNotificationList>"""
 
-print(f"Enviando nueva configuración a {device_ip}...")
+print(f"Enviando configuración con Heartbeat a {device_ip}...")
 try:
     r = requests.put(url, data=xml_body.encode('utf-8'), 
                      auth=HTTPDigestAuth(user, pwd), 

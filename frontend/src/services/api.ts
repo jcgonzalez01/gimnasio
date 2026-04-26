@@ -2,13 +2,66 @@ import axios from 'axios'
 import type {
   Member, MemberListItem, MembershipPlan, MemberMembership, AssignMembershipResponse,
   HikvisionDevice, AccessLog,
-  Product, ProductCategory, Sale, DashboardStats
+  Product, ProductCategory, Sale, DashboardStats,
+  AuthUser, LoginResponse, AuditLogEntry
 } from '../types'
 
-// Configuración de Axios simple y directa
-const api = axios.create({ 
-  baseURL: '/api'
+const TOKEN_KEY = 'gym_access_token'
+
+export const tokenStorage = {
+  get: () => localStorage.getItem(TOKEN_KEY),
+  set: (t: string) => localStorage.setItem(TOKEN_KEY, t),
+  clear: () => localStorage.removeItem(TOKEN_KEY),
+}
+
+// Configuración de Axios con JWT
+const api = axios.create({
+  baseURL: '/api',
 })
+
+// Request interceptor: adjuntar token
+api.interceptors.request.use((config) => {
+  const token = tokenStorage.get()
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`
+  }
+  return config
+})
+
+// Response interceptor: redirigir a login si 401
+api.interceptors.response.use(
+  (resp) => resp,
+  (err) => {
+    if (err?.response?.status === 401) {
+      tokenStorage.clear()
+      // Evitar bucle si ya estamos en /login
+      if (!window.location.pathname.startsWith('/login')) {
+        window.location.href = '/login'
+      }
+    }
+    return Promise.reject(err)
+  }
+)
+
+// ── Auth ──────────────────────────────────────────────────────────────────────
+
+export const authApi = {
+  login: (username: string, password: string) =>
+    api.post<LoginResponse>('/auth/login', { username, password }),
+  me: () => api.get<AuthUser>('/auth/me'),
+  changePassword: (current_password: string, new_password: string) =>
+    api.post('/auth/change-password', { current_password, new_password }),
+  listUsers: () => api.get<AuthUser[]>('/auth/users'),
+  createUser: (data: {
+    username: string; password: string; email?: string;
+    full_name?: string; role: string; is_active?: boolean
+  }) => api.post<AuthUser>('/auth/users', data),
+  updateUser: (id: number, data: Partial<AuthUser> & { password?: string }) =>
+    api.put<AuthUser>(`/auth/users/${id}`, data),
+  deleteUser: (id: number, force = false) => api.delete(`/auth/users/${id}`, { params: { force } }),
+  auditLog: (params?: { limit?: number; action?: string; user_id?: number }) =>
+    api.get<AuditLogEntry[]>('/auth/audit', { params }),
+}
 
 // ── Miembros ──────────────────────────────────────────────────────────────────
 
@@ -18,13 +71,14 @@ export const membersApi = {
   get: (id: number) => api.get<Member>(`/members/${id}`),
   create: (data: Partial<Member>) => api.post<Member>('/members', data),
   update: (id: number, data: Partial<Member>) => api.put<Member>(`/members/${id}`, data),
-  delete: (id: number) => api.delete(`/members/${id}`),
+  delete: (id: number, force = false) => api.delete(`/members/${id}`, { params: { force } }),
   uploadPhoto: (id: number, file: File) => {
     const form = new FormData()
     form.append('file', file)
     return api.post(`/members/${id}/photo`, form)
   },
   getMemberships: (id: number) => api.get<MemberMembership[]>(`/members/${id}/memberships`),
+  deleteMembership: (id: number) => api.delete(`/members/del-membership/${id}`),
   setFaceStatus: (id: number, faceEnrolled: boolean) =>
     api.patch(`/members/${id}/face-status`, null, { params: { face_enrolled: faceEnrolled } }),
   assignMembership: (id: number, data: {
@@ -49,7 +103,7 @@ export const plansApi = {
   create: (data: Partial<MembershipPlan>) => api.post<MembershipPlan>('/members/plans', data),
   update: (id: number, data: Partial<MembershipPlan>) =>
     api.put<MembershipPlan>(`/members/plans/${id}`, data),
-  delete: (id: number) => api.delete(`/members/plans/${id}`),
+  delete: (id: number, force = false) => api.delete(`/members/plans/${id}`, { params: { force } }),
 }
 
 // ── Dispositivos Hikvision ────────────────────────────────────────────────────
@@ -60,7 +114,7 @@ export const devicesApi = {
     api.post<HikvisionDevice>('/access/devices', data),
   update: (id: number, data: Partial<HikvisionDevice>) =>
     api.put<HikvisionDevice>(`/access/devices/${id}`, data),
-  delete: (id: number) => api.delete(`/access/devices/${id}`),
+  delete: (id: number, force = false) => api.delete(`/access/devices/${id}`, { params: { force } }),
   test: (id: number) => api.post(`/access/devices/${id}/test`),
   openDoor: (id: number) => api.post(`/access/devices/${id}/open-door`),
   debugDoor: (id: number) => api.get(`/access/devices/${id}/debug-door`),
@@ -68,7 +122,7 @@ export const devicesApi = {
     api.get(`/access/devices/${id}/comms-log`, { params: memberId ? { member_id: memberId } : {} }),
   syncMembers: (id: number) => api.post(`/access/devices/${id}/sync-members`),
   getHttpHosts: (id: number) => api.get(`/devices/${id}/http-hosts`),
-  configureEvents: (id: number, serverIp: string, serverPort = 8000, slotId = 1) =>
+  configureEvents: (id: number, serverIp: string, serverPort = 8001, slotId = 1) =>
     api.post(`/devices/${id}/configure-events`, null, {
       params: { server_ip: serverIp, server_port: serverPort, slot_id: slotId }
     }),
@@ -129,7 +183,8 @@ export const posApi = {
   createProduct: (data: Partial<Product>) => api.post<Product>('/pos/products', data),
   updateProduct: (id: number, data: Partial<Product>) =>
     api.put<Product>(`/pos/products/${id}`, data),
-  deleteProduct: (id: number) => api.delete(`/pos/products/${id}`),
+  deleteProduct: (id: number, force = false) =>
+    api.delete(`/pos/products/${id}`, { params: { force } }),
   updateStock: (id: number, quantity: number) =>
     api.put(`/pos/products/${id}/stock`, null, { params: { quantity } }),
   createSale: (data: {
@@ -141,6 +196,9 @@ export const posApi = {
     api.get<Sale[]>('/pos/sales', { params }),
   getSale: (id: number) => api.get<Sale>(`/pos/sales/${id}`),
   getDashboard: () => api.get<DashboardStats>('/pos/dashboard'),
+  receiptUrl: (id: number) => `/api/pos/sales/${id}/receipt`,
+  downloadReceipt: (id: number) =>
+    api.get(`/pos/sales/${id}/receipt`, { responseType: 'blob' }),
 }
 
 // ── Reportes ────────────────────────────────────────────────────────────────────

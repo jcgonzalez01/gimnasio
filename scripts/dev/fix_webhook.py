@@ -3,7 +3,7 @@ from requests.auth import HTTPDigestAuth
 
 DEVICE_IP = "192.168.1.38"
 SERVER_IP = "192.168.1.10"
-SERVER_PORT = 8000
+SERVER_PORT = 8001
 
 # XML simple y robusto
 xml = f"""<?xml version="1.0" encoding="UTF-8"?>

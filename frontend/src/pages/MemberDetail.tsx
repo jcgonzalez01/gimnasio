@@ -1,11 +1,11 @@
 import { useEffect, useState, useRef } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
-import { membersApi, plansApi, accessApi, devicesApi } from '../services/api'
-import type { Member, MembershipPlan, AccessLog, HikvisionDevice, AssignMembershipResponse } from '../types'
+import { membersApi, plansApi, accessApi, devicesApi, authApi } from '../services/api'
+import type { Member, MembershipPlan, AccessLog, HikvisionDevice, AssignMembershipResponse, AuthUser } from '../types'
 import {
   ArrowLeft, Camera, ScanFace, ShieldOff, Plus,
   User, Phone, Mail, MapPin, AlertTriangle, MonitorSmartphone,
-  CalendarClock, CheckSquare, Square, Receipt, Wifi, WifiOff, CheckCircle2, XCircle
+  CalendarClock, CheckSquare, Square, Receipt, Wifi, WifiOff, CheckCircle2, XCircle, Trash2
 } from 'lucide-react'
 import { format, addDays } from 'date-fns'
 import toast from 'react-hot-toast'
@@ -17,7 +17,8 @@ export default function MemberDetail() {
   const [plans, setPlans] = useState<MembershipPlan[]>([])
   const [logs, setLogs] = useState<AccessLog[]>([])
   const [devices, setDevices] = useState<HikvisionDevice[]>([])
-const [loading, setLoading] = useState(true)
+  const [currentUser, setCurrentUser] = useState<AuthUser | null>(null)
+  const [loading, setLoading] = useState(true)
   const [showMembershipForm, setShowMembershipForm] = useState(false)
   const [showEnrollForm, setShowEnrollForm] = useState(false)
   const [showReceipt, setShowReceipt] = useState(false)
@@ -47,22 +48,48 @@ const [loading, setLoading] = useState(true)
   const load = async () => {
     if (!id) return
     setLoading(true)
+    console.log('Cargando datos del miembro ID:', id)
+    
     try {
-      const [mRes, pRes, lRes, dRes] = await Promise.all([
-        membersApi.get(Number(id)),
+      // 1. Cargar datos básicos del miembro (Obligatorio)
+      try {
+        const mRes = await membersApi.get(Number(id))
+        setMember(mRes.data)
+      } catch (err) {
+        console.error('Error cargando datos básicos del miembro:', err)
+        toast.error('No se pudo encontrar al miembro')
+        setLoading(false)
+        return
+      }
+
+      // 2. Cargar el resto de información (Opcional, no detiene la carga si falla algo)
+      const results = await Promise.allSettled([
         plansApi.list(),
         accessApi.getLogs({ member_id: Number(id), limit: 20 }),
         devicesApi.list(),
+        authApi.me()
       ])
-      setMember(mRes.data)
-      setPlans(pRes.data)
-      setLogs(lRes.data)
-      const accDev = dRes.data.filter(d => d.device_type === 'access_control' && d.is_active)
-      setDevices(accDev)
-      // Pre-seleccionar todos los dispositivos
-      setEnrollForm(f => ({ ...f, selectedDevices: accDev.map(d => d.id) }))
-    } catch {
-      toast.error('Error al cargar miembro')
+
+      if (results[0].status === 'fulfilled') setPlans(results[0].value.data)
+      else console.error('Error cargando planes:', results[0].reason)
+
+      if (results[1].status === 'fulfilled') setLogs(results[1].value.data)
+      else console.error('Error cargando logs:', results[1].reason)
+
+      if (results[2].status === 'fulfilled') {
+        const accDev = results[2].value.data.filter(d => d.device_type === 'access_control' && d.is_active)
+        setDevices(accDev)
+        setEnrollForm(f => ({ ...f, selectedDevices: accDev.map(d => d.id) }))
+      } else console.error('Error cargando dispositivos:', results[2].reason)
+
+      if (results[3].status === 'fulfilled') {
+        setCurrentUser(results[3].value.data)
+        console.log('Usuario cargado:', results[3].value.data.username)
+      } else console.error('Error cargando usuario actual:', results[3].reason)
+
+    } catch (err) {
+      console.error('Error general en load:', err)
+      toast.error('Error al actualizar la vista')
     } finally {
       setLoading(false)
     }
@@ -207,6 +234,31 @@ const [loading, setLoading] = useState(true)
     }
   }
 
+  const handleDeleteMembership = async (membershipId: number) => {
+    if (!confirm('¿Estás seguro de que deseas eliminar esta membresía? Esta acción no se puede deshacer.')) return
+    
+    const tid = toast.loading('Eliminando membresía...')
+    console.log('Intentando eliminar membresía ID:', membershipId)
+    
+    try {
+      console.log('Llamando a api.delete para membresía:', membershipId)
+      const res = await membersApi.deleteMembership(membershipId)
+      console.log('Respuesta exitosa del servidor:', res.data)
+      toast.success('Membresía eliminada', { id: tid })
+      await load()
+    } catch (err: any) {
+      console.error('Error detallado al eliminar membresía:', {
+        status: err.response?.status,
+        data: err.response?.data,
+        url: err.config?.url,
+        method: err.config?.method,
+        membershipId
+      })
+      const msg = err.response?.data?.detail || 'Error al eliminar membresía'
+      toast.error(msg, { id: tid })
+    }
+  }
+
   if (loading) return (
     <div className="p-8 flex justify-center">
       <div className="animate-spin w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full" />
@@ -217,6 +269,8 @@ const [loading, setLoading] = useState(true)
   const activeMem = member.memberships.find(
     m => m.is_active && new Date(m.start_date) <= new Date() && new Date(m.end_date) >= new Date()
   )
+
+  const canDeleteMembership = currentUser?.role === 'admin' || currentUser?.role === 'manager'
 
   return (
     <div className="p-8 space-y-6 max-w-4xl">
@@ -392,8 +446,8 @@ const [loading, setLoading] = useState(true)
               </button>
             </div>
             {activeMem ? (
-              <div className="p-3 bg-green-50 rounded-lg border border-green-100">
-                <div className="flex justify-between items-start">
+              <div className="p-3 bg-green-50 rounded-lg border border-green-100 flex justify-between items-center">
+                <div className="flex justify-between items-start flex-1">
                   <div>
                     <p className="font-medium text-green-800">{activeMem.plan?.name}</p>
                     <p className="text-green-600 text-sm">
@@ -401,22 +455,47 @@ const [loading, setLoading] = useState(true)
                       {format(new Date(activeMem.end_date), 'dd/MM/yyyy')}
                     </p>
                   </div>
-                  <p className="font-bold text-green-700">${activeMem.price_paid.toFixed(2)}</p>
+                  <p className="font-bold text-green-700 mr-4">${activeMem.price_paid.toFixed(2)}</p>
                 </div>
+                {canDeleteMembership && (
+                  <button 
+                    onClick={() => handleDeleteMembership(activeMem.id)}
+                    className="p-1.5 text-red-600 hover:bg-red-100 rounded-lg transition-colors"
+                    title="Eliminar membresía"
+                  >
+                    <Trash2 size={16} />
+                  </button>
+                )}
               </div>
             ) : (
               <p className="text-gray-400 text-sm">Sin membresía activa</p>
             )}
-            {member.memberships.length > 1 && (
+            {member.memberships.length > (activeMem ? 1 : 0) && (
               <div className="mt-3 space-y-1">
                 <p className="text-xs text-gray-500 font-medium uppercase tracking-wide">Historial</p>
                 {member.memberships
-                  .filter(m => !m.is_active || m.id !== activeMem?.id)
+                  .filter(m => !activeMem || m.id !== activeMem.id)
+                  .sort((a, b) => new Date(b.end_date).getTime() - new Date(a.end_date).getTime())
                   .slice(0, 3)
                   .map(m => (
-                    <div key={m.id} className="flex justify-between text-xs text-gray-500 py-1 border-t">
-                      <span>{m.plan?.name} · {format(new Date(m.end_date), 'dd/MM/yy')}</span>
-                      <span>${m.price_paid.toFixed(2)}</span>
+                    <div key={m.id} className="flex justify-between items-center text-xs text-gray-500 py-2 border-t">
+                      <div className="flex-1">
+                        <span className="font-medium">{m.plan?.name}</span>
+                        <span className="mx-1">·</span>
+                        <span>{format(new Date(m.start_date), 'dd/MM/yy')} → {format(new Date(m.end_date), 'dd/MM/yy')}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="font-semibold">${m.price_paid.toFixed(2)}</span>
+                        {canDeleteMembership && (
+                          <button 
+                            onClick={() => handleDeleteMembership(m.id)}
+                            className="p-1 text-red-400 hover:text-red-600 hover:bg-red-50 rounded transition-colors"
+                            title="Eliminar del historial"
+                          >
+                            <Trash2 size={14} />
+                          </button>
+                        )}
+                      </div>
                     </div>
                   ))}
               </div>

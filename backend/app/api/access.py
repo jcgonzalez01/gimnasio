@@ -7,6 +7,8 @@ import asyncio, threading, json, logging
 import xml.etree.ElementTree as ET
 
 from ..core.database import get_db, SessionLocal
+from ..core.security import require_admin, get_current_user
+from ..models.user import User
 from ..models.access import HikvisionDevice, AccessLog
 from ..models.member import Member
 from ..schemas.access import (
@@ -16,8 +18,12 @@ from ..schemas.access import (
 from ..services.hikvision import HikvisionISAPI, image_file_to_base64
 from ..services.hikvision.parser import parse_event_payload
 from ..services.websocket_manager import ws_manager
+from ..services.audit import log_action
+from ..services.deletion import assess_device, to_409_payload
 
 router = APIRouter(prefix="/access", tags=["Control de Acceso"])
+# Router público (sin auth) para webhooks de Hikvision y WebSocket
+public_router = APIRouter(prefix="/access", tags=["Webhooks Hikvision"])
 logger = logging.getLogger(__name__)
 
 
@@ -28,7 +34,8 @@ def list_devices(db: Session = Depends(get_db)):
     return db.query(HikvisionDevice).all()
 
 
-@router.post("/devices", response_model=HikvisionDeviceOut, status_code=201)
+@router.post("/devices", response_model=HikvisionDeviceOut, status_code=201,
+             dependencies=[Depends(require_admin)])
 def create_device(device: HikvisionDeviceCreate, db: Session = Depends(get_db)):
     db_dev = HikvisionDevice(**device.model_dump())
     db.add(db_dev)
@@ -37,7 +44,8 @@ def create_device(device: HikvisionDeviceCreate, db: Session = Depends(get_db)):
     return db_dev
 
 
-@router.put("/devices/{device_id}", response_model=HikvisionDeviceOut)
+@router.put("/devices/{device_id}", response_model=HikvisionDeviceOut,
+            dependencies=[Depends(require_admin)])
 def update_device(device_id: int, device: HikvisionDeviceUpdate,
                   db: Session = Depends(get_db)):
     d = db.query(HikvisionDevice).filter(HikvisionDevice.id == device_id).first()
@@ -50,13 +58,33 @@ def update_device(device_id: int, device: HikvisionDeviceUpdate,
     return d
 
 
-@router.delete("/devices/{device_id}")
-def delete_device(device_id: int, db: Session = Depends(get_db)):
+@router.delete("/devices/{device_id}", dependencies=[Depends(require_admin)])
+def delete_device(device_id: int,
+                  request: Request,
+                  force: bool = False,
+                  user: User = Depends(get_current_user),
+                  db: Session = Depends(get_db)):
     d = db.query(HikvisionDevice).filter(HikvisionDevice.id == device_id).first()
     if not d:
         raise HTTPException(status_code=404, detail="Dispositivo no encontrado")
+
+    impact = assess_device(db, d)
+    if impact["history"] and not force:
+        raise HTTPException(status_code=409,
+                            detail=to_409_payload("El dispositivo", impact))
+
+    # Si force, desvincular logs antes de borrar para preservar el historial
+    if impact["history"]:
+        db.query(AccessLog).filter(AccessLog.device_id == device_id).update(
+            {"device_id": None}, synchronize_session=False
+        )
+
+    name = d.name
     db.delete(d)
     db.commit()
+    log_action(db, user, "delete", entity_type="device", entity_id=device_id,
+               summary=f"Eliminó dispositivo '{name}'" + (" (forzado)" if force else ""),
+               request=request)
     return {"message": "Dispositivo eliminado"}
 
 
@@ -79,13 +107,19 @@ def test_device_connection(device_id: int, db: Session = Depends(get_db)):
 
 
 @router.post("/devices/{device_id}/open-door")
-def open_door(device_id: int, door_no: int = 1, db: Session = Depends(get_db)):
+def open_door(device_id: int,
+              request: Request,
+              door_no: int = 1,
+              user: User = Depends(get_current_user),
+              db: Session = Depends(get_db)):
     d = db.query(HikvisionDevice).filter(HikvisionDevice.id == device_id).first()
     if not d:
         raise HTTPException(status_code=404, detail="Dispositivo no encontrado")
     hik = HikvisionISAPI(d.ip_address, d.port, d.username, d.password)
     result = hik.open_door(door_no=door_no)
-    print(f"DEBUG: open_door result type: {type(result)}, value: {result}")
+    log_action(db, user, "open_door", entity_type="device", entity_id=device_id,
+               summary=f"Apertura manual puerta {door_no} en '{d.name}'", request=request)
+    logger.info(f"open_door {d.name} → {result}")
     return result
 
 
@@ -174,7 +208,7 @@ def get_http_hosts(device_id: int, db: Session = Depends(get_db)):
 def configure_device_events(
     device_id: int,
     server_ip: str,
-    server_port: int = 8000,
+    server_port: int = 8001,
     slot_id: int = 1,
     db: Session = Depends(get_db),
 ):
@@ -184,7 +218,7 @@ def configure_device_events(
 
     Parámetros:
       server_ip:   IP de esta PC en la red local (ej: 192.168.1.10)
-      server_port: Puerto del backend (por defecto 8000)
+      server_port: Puerto del backend (por defecto 8001)
       slot_id:     Ranura 1-8 del dispositivo (por defecto 1)
     """
     d = db.query(HikvisionDevice).filter(HikvisionDevice.id == device_id).first()
@@ -844,7 +878,7 @@ async def enroll_face(
 
 @router.delete("/unenroll-face/{member_id}")
 async def unenroll_face(member_id: int, db: Session = Depends(get_db)):
-    """Elimina los datos faciales del miembro de todos los dispositivos."""
+    """Elimina los datos faciales y el usuario del miembro de todos los dispositivos."""
     member = db.query(Member).filter(Member.id == member_id).first()
     if not member:
         raise HTTPException(status_code=404, detail="Miembro no encontrado")
@@ -855,11 +889,13 @@ async def unenroll_face(member_id: int, db: Session = Depends(get_db)):
 
     for device in devices:
         hik = HikvisionISAPI(device.ip_address, device.port, device.username, device.password)
+        # Intentar borrar cara y luego usuario
         face_ok = hik.delete_face(employee_no, device.face_lib_id)
         user_ok = hik.delete_user(employee_no)
         results.append({"device": device.name, "face_deleted": face_ok, "user_deleted": user_ok})
 
     member.face_enrolled = False
+    member.hikvision_card_no = None # Limpiar vinculación con hardware
     db.commit()
     return {"success": True, "results": results}
 
@@ -868,50 +904,39 @@ async def unenroll_face(member_id: int, db: Session = Depends(get_db)):
 
 @router.get("/recent-faces")
 def get_recent_faces(db: Session = Depends(get_db)):
-    """Obtiene el PRIMER acceso exitoso del día de cada miembro, si ocurrió en la última hora."""
-    now = datetime.utcnow()
+    """Obtiene el último acceso exitoso de cada miembro ocurrido en la última hora, sin duplicados por ID."""
+    now = datetime.now()
     one_hour_ago = now - timedelta(hours=1)
-    today_start = now.replace(hour=0, minute=0, second=0, microsecond=0)
     
-    # 1. Obtener todos los IDs de miembros que entraron en la última hora
-    recent_logs = (
-        db.query(AccessLog.member_id)
+    # 1. Obtener todos los registros exitosos de la última hora ordenados por tiempo (nuevos primero)
+    logs = (
+        db.query(AccessLog)
         .filter(AccessLog.timestamp >= one_hour_ago)
         .filter(AccessLog.result == "granted")
         .filter(AccessLog.member_id.isnot(None))
-        .distinct()
+        .order_by(AccessLog.timestamp.desc())
         .all()
     )
-    member_ids = [r[0] for r in recent_logs]
     
+    # 2. Filtrar para dejar solo uno por ID (el más reciente)
+    seen_ids = set()
     recent = []
-    for m_id in member_ids:
-        # 2. Para cada uno de esos miembros, buscar su PRIMER acceso de TODO el día de hoy
-        first_log_today = (
-            db.query(AccessLog)
-            .filter(AccessLog.member_id == m_id)
-            .filter(AccessLog.timestamp >= today_start)
-            .filter(AccessLog.result == "granted")
-            .order_by(AccessLog.timestamp.asc())
-            .first()
-        )
-        
-        # 3. Solo lo incluimos si ese primer acceso ocurrió hace menos de una hora
-        if first_log_today and first_log_today.timestamp >= one_hour_ago:
-            member = db.query(Member).filter(Member.id == m_id).first()
+    
+    for log in logs:
+        if log.member_id not in seen_ids:
+            member = log.member
             if member:
                 recent.append({
-                    "id": first_log_today.id,
+                    "id": log.id,
                     "member_id": member.id,
                     "name": f"{member.first_name} {member.last_name}",
                     "photo_path": member.photo_path,
-                    "capture_path": first_log_today.capture_path,
-                    "timestamp": first_log_today.timestamp,
-                    "access_type": first_log_today.access_type
+                    "capture_path": log.capture_path,
+                    "timestamp": log.timestamp,
+                    "access_type": log.access_type
                 })
+                seen_ids.add(log.member_id)
     
-    # Ordenar por tiempo descendente (más recientes primero)
-    recent.sort(key=lambda x: x["timestamp"], reverse=True)
     return recent
 
 
@@ -1098,10 +1123,10 @@ member_name=f"{member.first_name} {member.last_name}" if member else (f"#{employ
 
 # ── Webhook para eventos de Hikvision ─────────────────────────────────────────
 
-@router.post("/events") 
-@router.post("/hikvision-webhook")
-@router.post("/ISAPI/Event/notification/httpHosts") # Ruta por defecto de algunos firmwares
-@router.post("/ISAPI/AccessControl/AcsEvent")
+@public_router.post("/events")
+@public_router.post("/hikvision-webhook")
+@public_router.post("/ISAPI/Event/notification/httpHosts") # Ruta por defecto de algunos firmwares
+@public_router.post("/ISAPI/AccessControl/AcsEvent")
 async def hikvision_webhook(request: Request, db: Session = Depends(get_db)):
     """
     Endpoint para recibir eventos push de dispositivos Hikvision.
@@ -1109,12 +1134,9 @@ async def hikvision_webhook(request: Request, db: Session = Depends(get_db)):
     """
     client_host = request.client.host
     body = await request.body()
-    
-    # Log de depuración
-    with open("webhook_raw_debug.log", "ab") as f:
-        f.write(f"\n--- {datetime.utcnow()} from {client_host} ---\n".encode())
-        f.write(body)
-        f.write(b"\n------------------------------------------\n")
+
+    if logger.isEnabledFor(logging.DEBUG):
+        logger.debug(f"Webhook from {client_host}: {body[:500]!r}")
 
     request_data = {}
     
@@ -1228,13 +1250,28 @@ async def hikvision_webhook(request: Request, db: Session = Depends(get_db)):
 
 # ── WebSocket ─────────────────────────────────────────────────────────────────
 
-@router.websocket("/ws")
-async def websocket_endpoint(websocket: WebSocket):
+@public_router.websocket("/ws")
+async def websocket_endpoint(websocket: WebSocket, token: Optional[str] = Query(None)):
+    """WS con auth por query param: /ws?token=<jwt>. Token requerido en producción."""
+    from ..core.security import decode_token
+    from ..core.config import settings
+    from jose import JWTError
+
+    # En producción, exigir token válido
+    if settings.is_production:
+        if not token:
+            await websocket.close(code=4401)
+            return
+        try:
+            decode_token(token)
+        except JWTError:
+            await websocket.close(code=4401)
+            return
+
     await ws_manager.connect(websocket)
     try:
         while True:
             data = await websocket.receive_text()
-            # ping/pong
             if data == "ping":
                 await websocket.send_text("pong")
     except WebSocketDisconnect:
